@@ -9,7 +9,7 @@ p {
 	margin-bottom: 0px;
 	font-size: 14px;
 	font-weight: 300;
-	color: #4a4a4a;
+	color: #f0cc00;
 	line-height: 24px;
 }
 a {
@@ -47,12 +47,12 @@ ul.social-icons li a {
 }
 
 ul.social-icons li a:hover {
-	background-color: #f33f3f;
+	background-color: #f0cc00;
 	color: #fff;
 }
 
 a.filled-button {
-	background-color: #f33f3f;
+	background-color: #f0cc00;
 	color: #fff;
 	font-size: 14px;
 	text-transform: capitalize;
@@ -64,7 +64,7 @@ a.filled-button {
 }
 
 a.filled-button:hover {
-	background-color: #121212;
+	background-color: #f0cc00;
 	color: #fff;
 }
 
@@ -77,7 +77,7 @@ a.filled-button:hover {
 .section-heading h2 {
 	font-size: 28px;
 	font-weight: 400;
-	color: #1e1e1e;
+	color: #f0cc00;
 	margin-bottom: 15px;
 }
 
@@ -90,7 +90,7 @@ a.filled-button:hover {
 }
 
 .page-heading .text-content h4 {
-	color: #f33f3f;
+	color: #f0cc00;
 	font-size: 22px;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -106,7 +106,7 @@ a.filled-button:hover {
 
 #preloader {
   overflow: hidden;
-  background: #f33f3f;
+  background: #f0cc00;
   left: 0;
   right: 0;
   top: 0;
@@ -129,7 +129,7 @@ a.filled-button:hover {
 }
 
 #preloader .jumper > div {
-  background-color: #fff;
+  background-color: #f0cc00;
   width: 10px;
   height: 10px;
   border-radius: 100%;
@@ -205,21 +205,21 @@ header .navbar {
 .background-header {
 	top: 0;
 	position: fixed;
-	background-color: #fff!important;
+	background-color: #232323!important;
 	box-shadow: 0px 1px 10px rgba(0,0,0,0.1);
 }
 .background-header .navbar-brand h2 {
-	color: #121212!important;
+	color: #ffffff!important;
 }
 .background-header .navbar-nav a.nav-link {
-	color: #1e1e1e!important;
+	color: #ffff!important;
 }
 .background-header .navbar-nav .nav-link:hover,
 .background-header .navbar-nav .active>.nav-link,
 .background-header .navbar-nav .nav-link.active,
 .background-header .navbar-nav .nav-link.show,
 .background-header .navbar-nav .show>.nav-link {
-	color: #f33f3f!important;
+	color: #f0cc00!important;
 }
 .navbar .navbar-brand {
 	float: 	left;
@@ -238,7 +238,7 @@ header .navbar {
 }
 .navbar .navbar-brand h2 em {
 	font-style: normal;
-	color: #f33f3f;
+	color: #f0cc00;
 }
 #navbarResponsive {
 	z-index: 999;
@@ -265,14 +265,14 @@ header .navbar {
 .navbar .navbar-nav .show>.nav-link {
 	color: #fff;
 	padding-bottom: 25px;
-	border-bottom: 3px solid #f33f3f;
+	border-bottom: 3px solid #f0cc00;
 }
 .navbar .navbar-toggler-icon {
 	background-image: none;
 }
 .navbar .navbar-toggler {
-	border-color: #fff;
-	background-color: #fff;	
+	border-color: #232323;
+	background-color: #232323;	
 	height: 36px;
 	outline: none;
 	border-radius: 0px;
@@ -282,7 +282,7 @@ header .navbar {
 }
 .navbar .navbar-toggler-icon:after {
 	content: '\f0c9';
-	color: #f33f3f;
+	color: #f0cc00;
 	font-size: 18px;
 	line-height: 26px;
 	font-family: 'FontAwesome';
@@ -334,7 +334,7 @@ header .navbar {
 }
 
 .banner .text-content h4 {
-	color: #f33f3f;
+	color: #f0cc00;
 	font-size: 22px;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -394,7 +394,7 @@ header .navbar {
 	text-transform: uppercase;
 	font-size: 13px;
 	font-weight: 700;
-	color: #f33f3f;
+	color: #f0cc00;
 }
 
 .product-item {
@@ -437,7 +437,7 @@ header .navbar {
 }
 
 .product-item .down-content ul li i {
-	color: #f33f3f;
+	color: #f0cc00;
 	font-size: 14px;
 }
 
@@ -446,12 +446,12 @@ header .navbar {
 	right: 30px;
 	bottom: 30px;
 	font-size: 13px;
-	color: #f33f3f;
+	color: #f0cc00;
 	font-weight: 500;
 }
 
 .product-item .down-content span a {
-	color: #f33f3f;
+	color: #f0cc00;
 	display: inline-block;
 	margin-bottom: 3px;
 }
@@ -527,11 +527,11 @@ header .navbar {
 }
 
 .best-features ul.featured-list li a:hover {
-	color: #f33f3f;
+	color: #f0cc00;
 }
 
 .best-features ul.featured-list li a:hover::before {
-	background-color: #f33f3f;
+	background-color: #f0cc00;
 }
 
 .best-features .filled-button {
@@ -590,7 +590,7 @@ footer .inner-content p {
 }
 
 footer .inner-content p a {
-	color: #f33f3f;
+	color: #f0cc00;
 	margin-left: 3px;
 }
 
@@ -623,7 +623,7 @@ footer .inner-content p a {
 
 .products .filters ul li.active,
 .products .filters ul li:hover {
-  color: #f33f3f;
+  color: #f0cc00;
 }
 
 .dropdown-menu { 
@@ -674,8 +674,8 @@ footer .inner-content p a {
 
 .products ul.pages li a:hover,
 .products ul.pages li.active a {
-	background-color: #f33f3f;
-	border-color: #f33f3f;
+	background-color: #f0cc00;
+	border-color: #f0cc00;
 	color: #fff;
 }
 
@@ -708,7 +708,7 @@ footer .inner-content p a {
 
 .team-member .thumb-container .hover-effect {
 	position: absolute;
-	background-color: rgba(243,63,63,0.9);
+	background-color: #f0cc00;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -729,7 +729,7 @@ footer .inner-content p a {
 
 .team-member .thumb-container .hover-effect .hover-content ul.social-icons li a:hover {
 	background-color: #fff;
-	color: #f33f3f;
+	color: #f0cc00;
 }
 
 .team-member:hover .hover-effect {
@@ -746,7 +746,7 @@ footer .inner-content p a {
 .team-member .down-content span {
 	display: block;
 	font-size: 13px;
-	color: #f33f3f;
+	color: #f0cc00;
 	font-weight: 500;
 	margin-bottom: 20px;
 }
@@ -784,7 +784,7 @@ footer .inner-content p a {
 	display: inline-block;
 	text-align: center;
 	line-height: 100px;
-	background-color: #f33f3f;
+	background-color: #f0cc00;
 	color: #fff;
 	font-size: 32px;
 }
@@ -825,7 +825,7 @@ footer .inner-content p a {
 }
 
 .owl-clients button.owl-dot.active { 
-	background: #f33f3f!important; 
+	background: #f0cc00!important; 
 }
 
 /* Clients */
@@ -919,7 +919,7 @@ footer .inner-content p a {
 }
 
 .contact-form button.filled-button {
-	background-color: #f33f3f;
+	background-color: #f0cc00;
 	color: #fff;
 	font-size: 14px;
 	text-transform: capitalize;
@@ -951,11 +951,11 @@ footer .inner-content p a {
 }
 
 .accordion a:hover {
-	color: #f33f3f!important;
+	color: #f0cc00!important;
 }
 
 .accordion a.active {
-  color: #f33f3f!important;
+  color: #f0cc00!important;
 }
 
 .accordion li .content {
@@ -1091,7 +1091,7 @@ footer .inner-content p a {
 	.navbar .navbar-nav .nav-link.active,
 	.navbar .navbar-nav .nav-link.show,
 	.navbar .navbar-nav .show>.nav-link {
-		color: #f33f3f!important;
+		color: #f0cc00!important;
 		border-bottom: none!important;
 		padding-bottom: 15px;
 	}
