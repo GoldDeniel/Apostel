@@ -75,74 +75,40 @@
               <a href="products.php">továbbiak<i class="fa fa-angle-right"></i></a>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="product-item">
-              <a href="product-details..php"><img src="assets/images/product-1.jpeg" alt=""></a>
-              <div class="down-content">
-                <a href="product-details.php"><h4>Lorem ipsum dolor sit amet.</h4></a>
-                <h6><small><del>$999.00 </del></small> $779.00</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta voluptas quia dolor fuga odit.</p>
-              </div>
-            </div>
-          </div>
+        <?php
+        
+        require_once 'credentials.php';
+        $conn = new PDO(
+          'mysql:host=localhost;dbname='.DB_NAME.';charset=utf8',
+          DB_NAME,
+          DB_PASSWORD
+      );
+        $sql = "SELECT * FROM Beers ORDER BY id LIMIT 6";
 
-          <div class="col-md-4">
-            <div class="product-item">
-              <a href="product-details.php"><img src="assets/images/product-2.jpeg" alt=""></a>
-              <div class="down-content">
-                <a href="product-details.php"><h4>Lorem ipsum dolor sit amet.</h4></a>
-                <h6><small><del>$99.00</del></small>  $79.00</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non beatae soluta, placeat vitae cum maxime culpa itaque minima.</p>
+        $res = $conn -> query($sql);
+        $records = $res -> fetchAll(PDO::FETCH_ASSOC);
+        //var_dump($records);
+        
+        foreach ($records as $record) {
+        
+        echo 
+        "
+          <div class=\"col-md-4\">
+            <div class=\"product-item\">
+              <a href=\"product-details..php\"><img src=\"assets/images/".$record['img_url']."\"></a>
+              <div class=\"down-content\">
+                <a href=\"product-details.php\"><h4>".$record['label']."</h4></a>
+                <h6>$".$record['price']."</h6>
+                <p>".$record['description']."</p>
               </div>
             </div>
           </div>
-
-          <div class="col-md-4">
-            <div class="product-item">
-              <a href="product-details.php"><img src="assets/images/product-3.jpeg" alt=""></a>
-              <div class="down-content">
-                <a href="product-details.php"><h4>Lorem ipsum dolor sit amet.</h4></a>
-                <h6><small><del>$1999.00</del></small>   $1779.00</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt nisi quia aspernatur, harum facere delectus saepe enim?</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="product-item">
-              <a href="product-details.php"><img src="assets/images/product-4.jpeg" alt=""></a>
-              <div class="down-content">
-                <a href="product-details.php"><h4>Lorem ipsum dolor sit amet.</h4></a>
-                <h6><small><del>$999.00 </del></small> $779.00</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta voluptas quia dolor fuga odit.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="product-item">
-              <a href="product-details.php"><img src="assets/images/product-5.jpeg" alt=""></a>
-              <div class="down-content">
-                <a href="product-details.php"><h4>Lorem ipsum dolor sit amet.</h4></a>
-                <h6><small><del>$999.00 </del></small> $779.00</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta voluptas quia dolor fuga odit.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="product-item">
-              <a href="product-details.php"><img src="assets/images/product-6.jpeg" alt=""></a>
-              <div class="down-content">
-                <a href="product-details.php"><h4>Lorem ipsum dolor sit amet.</h4></a>
-                <h6><small><del>$999.00 </del></small> $779.00</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta voluptas quia dolor fuga odit.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+        ";
+        }
+        // $conn -> close();
+        
+        $conn = null;
+        ?>
 
     <div class="best-features">
       <div class="container">

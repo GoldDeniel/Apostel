@@ -660,6 +660,9 @@ footer .inner-content p a {
 	margin: 0px 2px;
 }
 
+.pages li a {
+	border-radius: 10px;
+}
 .products ul.pages li a {
 	width: 44px;
 	height: 44px;
