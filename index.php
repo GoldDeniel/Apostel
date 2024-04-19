@@ -75,39 +75,8 @@
               <a href="products.php">továbbiak<i class="fa fa-angle-right"></i></a>
             </div>
           </div>
-        <?php
-        
-        require_once 'credentials.php';
-        $conn = new PDO(
-          'mysql:host=localhost;dbname='.DB_NAME.';charset=utf8',
-          DB_NAME,
-          DB_PASSWORD
-      );
-        $sql = "SELECT * FROM Beers ORDER BY id LIMIT 6";
-
-        $res = $conn -> query($sql);
-        $records = $res -> fetchAll(PDO::FETCH_ASSOC);
-        //var_dump($records);
-        
-        foreach ($records as $record) {
-        
-        echo 
-        "
-          <div class=\"col-md-4\">
-            <div class=\"product-item\">
-              <a href=\"product-details..php\"><img src=\"assets/images/".$record['img_url']."\"></a>
-              <div class=\"down-content\">
-                <a href=\"product-details.php\"><h4>".$record['label']."</h4></a>
-                <h6>$".$record['price']."</h6>
-                <p>".$record['description']."</p>
-              </div>
-            </div>
-          </div>
-        ";
-        }
-        // $conn -> close();
-        
-        $conn = null;
+          <?php
+        include 'product_list.php'
         ?>
 
     <div class="best-features">
@@ -272,11 +241,11 @@
             <div class="inner-content">
               <div class="row">
                 <div class="col-md-8">
-                  <h4>Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque corporis amet elite author nulla.</p>
+                  <h4>Disclaimer</h4>
+                  <p>This site is non-existent and the beer has nothing to do with the real Apostel beer.</p>
                 </div>
                 <div class="col-lg-4 col-md-6 text-right">
-                  <a href="contact.php" class="filled-button">Contact Us</a>
+                  <a href="contact.php" class="filled-button" onclick="alert('I said don\'t!')">Don't Contact Us</a>
                 </div>
               </div>
             </div>
