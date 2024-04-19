@@ -10,7 +10,7 @@
     <link rel="icon" href="assets/images/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>ApostHell | Tüzesen fagyos sör</title>
+    <title>ApostHell</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -35,33 +35,10 @@
     <!-- ***** Preloader End ***** -->
 
     <!-- Header -->
-    <header class="">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>ApostHell - <em>Tüzesen fagyos sör</em></h2></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Kezdőlap
-                      <span class="sr-only">(current)</span>
-                    </a>
-                </li> 
-
-                <li class="nav-item"><a class="nav-link" href="products.html">Termékek</a></li>
-
-                <li class="nav-item"><a class="nav-link" href="about-us.html">Rólunk</a></li>
-
-                <li class="nav-item"><a class="nav-link" href="contact.html">Kapcsolat</a></li>
-
-                <li class="nav-item"><a class="nav-link" href="checkout.html">Bevásárló kosár</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+    
+    <?php 
+      include 'elements/header.php';
+    ?>
 
     <!-- Page Content -->
     <!-- Banner Starts Here -->
@@ -69,20 +46,22 @@
       <div class="owl-banner owl-carousel">
         <div class="banner-item-01">
           <div class="text-content">
-            <h4>ApostHell</h4>
-            <h2>Minőségi kézműves sörök, amik a te egészségedet szolgálják!</h2>
+            <h4>A kedvenc söröd itt megtalálod!</h4>
+            <h2>ApostHell</h2>
           </div>
         </div>
         <div class="banner-item-02">
           <div class="text-content">
-            <h4>ApostHell</h4>
-            <h2>A kedvenc ízeid nálunk megtalálod!</h2>
+            <!-- Itt a lentihez kepest szinten, please -->
+            <h4>Nem volt pénzünk igazi modellekre</h4>
+            <h2>Szép lányok</h2>
           </div>
         </div>
         <div class="banner-item-03">
           <div class="text-content">
-            <h4>ApostHell</h4>
-            <h2>Válogass a webshopunkban a széles kínálatunkból!</h2>
+            <!-- TODO: Ezeket kerlek majd a stilus alapjan lodd be, a problema, hogy nem latszik a text -->
+            <h4 style="color: black; text-shadow: 2px 2px 4px #ffffff;">Óriási kínálat várja azokat, akik szomjasak</h4>
+            <h2 style="text-shadow: 2px 2px 4px #000000;">Változatosság</h2>    
           </div>
         </div>
       </div>
@@ -95,84 +74,19 @@
           <div class="col-md-12">
             <div class="section-heading">
               <h2>Kiemelt sörkínálatunk</h2>
-              <a href="products.html">továbbiak<i class="fa fa-angle-right"></i></a>
+              <a href="products.php">továbbiak<i class="fa fa-angle-right"></i></a>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="product-item">
-              <a href="product-details.html"><img src="assets/images/product-1-370x270.jpg" alt=""></a>
-              <div class="down-content">
-                <a href="product-details.html"><h4>ApostHell tüzes sör</h4></a>
-                <h6><small><del>1099 HUF </del></small> 899 HUF</h6>
-                <p>ApostHell tüzes sör, ami meghozza a kedved az élethez, ha az igazi sör élményre vágysz! Alk. 5%</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="product-item">
-              <a href="product-details.html"><img src="assets/images/product-2-370x270.jpg" alt=""></a>
-              <div class="down-content">
-                <a href="product-details.html"><h4>Lorem ipsum dolor sit amet.</h4></a>
-                <h6><small><del>$99.00</del></small>  $79.00</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non beatae soluta, placeat vitae cum maxime culpa itaque minima.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="product-item">
-              <a href="product-details.html"><img src="assets/images/product-3-370x270.jpg" alt=""></a>
-              <div class="down-content">
-                <a href="product-details.html"><h4>Lorem ipsum dolor sit amet.</h4></a>
-                <h6><small><del>$1999.00</del></small>   $1779.00</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt nisi quia aspernatur, harum facere delectus saepe enim?</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="product-item">
-              <a href="product-details.html"><img src="assets/images/product-4-370x270.jpg" alt=""></a>
-              <div class="down-content">
-                <a href="product-details.html"><h4>Lorem ipsum dolor sit amet.</h4></a>
-                <h6><small><del>$999.00 </del></small> $779.00</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta voluptas quia dolor fuga odit.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="product-item">
-              <a href="product-details.html"><img src="assets/images/product-5-370x270.jpg" alt=""></a>
-              <div class="down-content">
-                <a href="product-details.html"><h4>Lorem ipsum dolor sit amet.</h4></a>
-                <h6><small><del>$999.00 </del></small> $779.00</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta voluptas quia dolor fuga odit.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="product-item">
-              <a href="product-details.html"><img src="assets/images/product-6-370x270.jpg" alt=""></a>
-              <div class="down-content">
-                <a href="product-details.html"><h4>Lorem ipsum dolor sit amet.</h4></a>
-                <h6><small><del>$999.00 </del></small> $779.00</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta voluptas quia dolor fuga odit.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+          <?php
+        include 'product_list.php'
+        ?>
 
     <div class="best-features">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="section-heading">
-              <h2>Rólunk</h2>
+              <h2>About Us</h2>
             </div>
           </div>
           <div class="col-md-6">
@@ -184,17 +98,67 @@
                 <li><a href="#">It aquecorporis nulla aspernatur</a></li>
                 <li><a href="#">Corporis, omnis doloremque</a></li>
               </ul>
-              <a href="about-us.html" class="filled-button">Olvasd tovább</a>
+              <a href="about-us.php" class="filled-button">Read More</a>
             </div>
           </div>
           <div class="col-md-6">
             <div class="right-image">
-              <img src="assets/images/about-1-570x350.jpg" alt="">
+              <img src="assets/images/unnamed_stock_photo3.jpeg" alt="">
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="services" style="background-image: url(assets/images/other-image-fullscren-1-1920x900.jpg);" >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>Latest blog posts</h2>
+
+              <a href="blog.php">read more <i class="fa fa-angle-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item">
+              <a href="#" class="services-item-image"><img src="assets/images/blog-1-370x270.jpg" class="img-fluid" alt=""></a>
+
+              <div class="down-content">
+                <h4><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit hic</a></h4>
+
+                <p style="margin: 0;"> John Doe &nbsp;&nbsp;|&nbsp;&nbsp; 12/06/2020 10:30 &nbsp;&nbsp;|&nbsp;&nbsp; 114</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item">
+              <a href="#" class="services-item-image"><img src="assets/images/blog-2-370x270.jpg" class="img-fluid" alt=""></a>
+
+              <div class="down-content">
+                <h4><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h4>
+
+                <p style="margin: 0;"> John Doe &nbsp;&nbsp;|&nbsp;&nbsp; 12/06/2020 10:30 &nbsp;&nbsp;|&nbsp;&nbsp; 114</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item">
+              <a href="#" class="services-item-image"><img src="assets/images/blog-3-370x270.jpg" class="img-fluid" alt=""></a>
+
+              <div class="down-content">
+                <h4><a href="#">Aperiam modi voluptatum fuga officiis cumque</a></h4>
+
+                <p style="margin: 0;"> John Doe &nbsp;&nbsp;|&nbsp;&nbsp; 12/06/2020 10:30 &nbsp;&nbsp;|&nbsp;&nbsp; 114</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Elon musk es tarsai -->
 
     <div class="happy-clients">
       <div class="container">
@@ -203,7 +167,7 @@
             <div class="section-heading">
               <h2>Happy Clients</h2>
 
-              <a href="testimonials.html">Továbbiak<i class="fa fa-angle-right"></i></a>
+              <a href="testimonials.php">read more <i class="fa fa-angle-right"></i></a>
             </div>
           </div>
           <div class="col-md-12">
@@ -281,11 +245,11 @@
             <div class="inner-content">
               <div class="row">
                 <div class="col-md-8">
-                  <h4>Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque corporis amet elite author nulla.</p>
+                  <h4>Disclaimer</h4>
+                  <p>This site is non-existent and the beer has nothing to do with the real Apostel beer.</p>
                 </div>
                 <div class="col-lg-4 col-md-6 text-right">
-                  <a href="contact.html" class="filled-button">Contact Us</a>
+                  <a href="contact.php" class="filled-button" onclick="alert('I said don\'t!')">Don't Contact Us</a>
                 </div>
               </div>
             </div>
@@ -295,17 +259,9 @@
     </div>
 
     
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="inner-content">
-              <p>Copyright © 2024 ApostHell | Tüzesen fagyos sör</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <?php 
+      include 'elements/footer.php';
+    ?>
 
 
     <!-- Bootstrap core JavaScript -->

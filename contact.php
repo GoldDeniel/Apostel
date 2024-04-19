@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hun">
+<html lang="en">
 
   <head>
 
@@ -35,44 +35,17 @@
     <!-- ***** Preloader End ***** -->
 
     <!-- Header -->
-    <header class="">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>ApostHell - <em>Tüzesen fagyos sör</em></h2></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Kezdőlap</a></li>
-                
-
-                <li class="nav-item"><a class="nav-link" href="products.html">Termékek</a></li>
-
-                <li class="nav-item"><a class="nav-link" href="about-us.html">Rólunk</a></li>
-
-                <li class="nav-item active">
-                  <a class="nav-link" href="contact.html">Kapcsolat
-                    <span class="sr-only">(current)</span>
-                  </a>
-                </li> 
-
-                <li class="nav-item"><a class="nav-link" href="checkout.html">Bevásárló kosár</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-
+    <?php 
+      include 'elements/header.php';
+    ?>
     <!-- Page Content -->
     <div class="page-heading contact-heading header-text" style="background-image: url(assets/images/heading-4-1920x500.jpg);">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="text-content">
-              <h4>Kapcsolat</h4>
-              <h2>Elérhetőségeink</h2>
+              <h4>Lorem ipsum dolor</h4>
+              <h2>Contact Us</h2>
             </div>
           </div>
         </div>
@@ -85,23 +58,18 @@
         <div class="row">
           <div class="col-md-12">
             <div class="section-heading">
-              <h2>A helyzetünk a Google Térképen</h2>
+              <h2>Our Location on Maps</h2>
             </div>
           </div>
           <div class="col-md-8">
-<!-- How to change your own map point
-	1. Go to Google Maps
-	2. Click on your location point
-	3. Click "Share" and choose "Embed map" tab
-	4. Copy only URL and paste it within the src="" field below
--->
+
             <div id="map">
-              <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="330px" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1363.168642281496!2d19.668264324101834!3d46.89608476467244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4743da7a6c479e1d%3A0xc8292b3f6dc69e7f!2sJohn%20von%20Neumann%20University%20GAMF%20Faculty%20of%20Engineering%20and%20Computer%20Science!5e0!3m2!1sen!2shu!4v1713385068393!5m2!1sen!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
           <div class="col-md-4">
             <div class="left-content">
-              <h4>Az irodánkról bővebben</h4>
+              <h4>About our office</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisic elit. Sed voluptate nihil eumester consectetur similiqu consectetur.<br><br>Lorem ipsum dolor sit amet, consectetur adipisic elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti.</p>
               <ul class="social-icons">
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -121,7 +89,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="section-heading">
-              <h2>Kérdésed van? Küldj nekünk üzenetet!</h2>
+              <h2>Send us a Message</h2>
             </div>
           </div>
           <div class="col-md-8">
@@ -130,27 +98,27 @@
                 <div class="row">
                   <div class="col-lg-12 col-md-12 col-sm-12">
                     <fieldset>
-                      <input name="name" type="text" class="form-control" id="name" placeholder="Teljes név" required="">
+                      <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
                     </fieldset>
                   </div>
                   <div class="col-lg-12 col-md-12 col-sm-12">
                     <fieldset>
-                      <input name="email" type="text" class="form-control" id="email" placeholder="E-mail cím" required="">
+                      <input name="email" type="text" class="form-control" id="email" placeholder="E-Mail Address" required="">
                     </fieldset>
                   </div>
                   <div class="col-lg-12 col-md-12 col-sm-12">
                     <fieldset>
-                      <input name="subject" type="text" class="form-control" id="subject" placeholder="Tárgy" required="">
+                      <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject" required="">
                     </fieldset>
                   </div>
                   <div class="col-lg-12">
                     <fieldset>
-                      <textarea name="message" rows="6" class="form-control" id="message" placeholder="Az üzeneted" required=""></textarea>
+                      <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
                     </fieldset>
                   </div>
                   <div class="col-lg-12">
                     <fieldset>
-                      <button type="submit" id="form-submit" class="filled-button">Küldés</button>
+                      <button type="submit" id="form-submit" class="filled-button">Send Message</button>
                     </fieldset>
                   </div>
                 </div>
@@ -166,17 +134,9 @@
       </div>
     </div>
 
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="inner-content">
-              <p>Copyright © 2024 ApostHell | Tüzesen fagyos sör</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <?php 
+      include 'elements/footer.php';
+    ?>
 
 
     <!-- Bootstrap core JavaScript -->

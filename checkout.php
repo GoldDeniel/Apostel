@@ -10,7 +10,7 @@
     <link rel="icon" href="assets/images/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>ApostHell | Bevásárló kosár</title>
+    <title>ApostHell | Kosár</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -36,35 +36,9 @@
     <!-- ***** Preloader End ***** -->
 
     <!-- Header -->
-    <header class="">
-     <nav class="navbar navbar-expand-lg">
-       <div class="container">
-         <a class="navbar-brand" href="index.html"><h2>ApostHell - <em>Tüzesen fagyos sör</em></h2></a>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-           <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse" id="navbarResponsive">
-           <ul class="navbar-nav ml-auto">
-               <li class="nav-item"><a class="nav-link" href="index.html">Kezdőlap</a></li>
-               
-
-               <li class="nav-item"><a class="nav-link" href="products.html">Termékek</a></li>
-
-               <li class="nav-item"><a class="nav-link" href="about-us.html">Rólunk</a></li>
-
-               <li class="nav-item"><a class="nav-link" href="contact.html">Kapcsolat</a></li>
-
-               <li class="nav-item active">
-                    <a class="nav-link" href="checkout.html">Bevásárló kosár
-                      <span class="sr-only">(current)</span>
-                    </a>
-                </li> 
-           </ul>
-         </div>
-       </div>
-     </nav>
-   </header>
-
+    <?php
+          include 'elements/header.php';
+     ?>
     <!-- Page Content -->
     <div class="page-heading about-heading header-text" style="background-image: url(assets/images/heading-6-1920x500.jpg);">
       <div class="container">
@@ -89,7 +63,7 @@
                   </div>
                   
                   <div class="col-6 text-right">
-                       <strong>$ 128.00</strong>
+                       <strong>$ 0.00</strong>
                   </div>
              </div>
           </li>
@@ -113,7 +87,7 @@
                     </div>
 
                     <div class="col-6 text-right">
-                         <strong>$ 10.00</strong>
+                         <strong>$ 0.00</strong>
                     </div>
                </div>
           </li>
@@ -125,7 +99,7 @@
                     </div>
 
                     <div class="col-6 text-right">
-                         <strong>$ 138.00</strong>
+                         <strong>$ 0.00</strong>
                     </div>
                </div>
           </li>
@@ -137,7 +111,7 @@
                     </div>
 
                     <div class="col-6 text-right">
-                         <strong>$ 20.00</strong>
+                         <strong>$ 0.00</strong>
                     </div>
                </div>
           </li>
@@ -262,18 +236,10 @@
       </div>
     </div>
 
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="inner-content">
-              <p>Copyright © 2024 ApostHell | Tüzesen fagyos sör</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <?php
 
+          include 'elements/footer.php';
+    ?>
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
