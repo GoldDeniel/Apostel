@@ -14,7 +14,7 @@
         
         foreach ($records as $record) {
 
-          $prize = $record['price'] == 0 ? "<span style=\"color: red\">Out of stock</span>" : "$".$record['price'];
+          $prize = $record['price'] == 0 ? "<span style=\"color: red\">Jelenleg nincs raktáron</span>" : "$".$record['price'];
 
           echo 
           "

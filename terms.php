@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hun">
 
   <head>
 
@@ -40,13 +40,13 @@
     ?>
 
     <!-- Page Content -->
-    <div class="page-heading about-heading header-text" style="background-image: url(assets/images/heading-5-1920x500.jpg);">
+    <div class="page-heading about-heading header-text" style="background-image: url(assets/images/terms.jpg);">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="text-content">
-              <h4>Lorem ipsum dolor sit</h4>
-              <h2>Terms</h2>
+              <h4>Általános szerződési feltételek</h4>
+              <h2>Feltételeink bővebben</h2>
             </div>
           </div>
         </div>
@@ -58,33 +58,72 @@
         <div class="row">
           <div class="col-md-12">
             <div class="section-heading">
-              <h2>Lorem ipsum dolor sit amet.</h2>
+              <h2>Általános szerződési feltételek</h2>
             </div>
 
-            <h5>Lorem ipsum dolor sit amet.</h5>
+            <h5>1. Bevezető</h5>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat. Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis.</p>
+            <p>Ezen Általános Szerződési Feltételek (a továbbiakban: "ÁSZF") az ApostHell Hungary Kft., székhelye: 6000 Kecskemét, Izsáki út 10. adószám: 12345678-9-01, nyilvántartási szám: ABC123456DEF (a továbbiakban: "Szolgáltató") és az általa nyújtott szolgáltatásokat igénybe vevő ügyfél (a továbbiakban: "Felhasználó") közötti jogviszonyra vonatkoznak.</p>
 
             <br>
             <br>
 
-            <h5>Lorem ipsum dolor sit amet.</h5>
+            <h5>2. A Szolgáltatások</h5>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo quae eveniet tempora reprehenderit quo, necessitatibus vel sit laboriosam, sunt obcaecati quisquam explicabo voluptatibus earum facilis quidem fuga maiores. Quasi, obcaecati? <br><br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, est officiis. Ipsam quas consequuntur adipisci quis, fuga pariatur eius eveniet qui similique nulla inventore accusantium, suscipit asperiores quibusdam culpa iure!</p>
+            <p>A Szolgáltató által nyújtott szolgáltatások részletes leírása és feltételei megtalálhatók a Szolgáltató honlapján vagy egyedi megállapodás alapján.</p>
             
             <br>
             <br>
 
-            <h5>Lorem ipsum dolor sit amet.</h5>
+            <h5>3. Fizetési Feltételek</h5>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat. Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis.</p>
+            <p>A Szolgáltatásokért fizetendő díjak és fizetési feltételek részletezése a Szolgáltató honlapján vagy egyedi megállapodás alapján található.</p>
         
             <br>
             <br>
 
-            <h5>Lorem ipsum dolor sit amet.</h5>
+            <h5>4. Felhasználói Felelősség és Jogok</h5>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo quae eveniet tempora reprehenderit quo, necessitatibus vel sit laboriosam, sunt obcaecati quisquam explicabo voluptatibus earum facilis quidem fuga maiores. Quasi, obcaecati? <br><br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, est officiis. Ipsam quas consequuntur adipisci quis, fuga pariatur eius eveniet qui similique nulla inventore accusantium, suscipit asperiores quibusdam culpa iure!</p>
+            <p>A Felhasználó felelős minden olyan tevékenységért és tartalomért, amelyet a Szolgáltató szolgáltatásai igénybevétele során létrehoz vagy terjeszt.</p>
+
+            <br>
+            <br>
+
+            <h5>5. Adatvédelem és Biztonság</h5>
+
+            <p>A Szolgáltató kötelezettséget vállal arra, hogy a Felhasználó által rendelkezésre bocsátott személyes adatokat bizalmasan kezeli, és azokat kizárólag a szolgáltatás nyújtása céljából használja fel.</p>
+            
+            <br>
+            <br>
+
+            <h5>6. Felelősségkorlátozás</h5>
+
+            <p>A Szolgáltató nem vállal felelősséget semmilyen közvetlen vagy közvetett kárért, amely a Szolgáltatások használatából vagy azokhoz való hozzáférésből ered.</p>
+            
+            <br>
+            <br>
+
+            <h5>7. Jogviták</h5>
+
+            <p>Ezen ÁSZF-ból eredő valamennyi jogvitát a felek elsődlegesen békés úton, tárgyalással igyekeznek rendezni. Amennyiben a jogvitát nem sikerül békésen megoldani, azt a Szolgáltató székhelye szerinti illetékes bíróság előtt kell rendezni.</p>
+            
+            <br>
+            <br>
+
+            <h5>8. Módosítások</h5>
+
+            <p>A Szolgáltató fenntartja a jogot arra, hogy bármikor módosítsa ezen ÁSZF feltételeit. Az ilyen módosításokat a Szolgáltató az ÁSZF honlapján vagy más megfelelő módon közzéteszi, és azok azonnal hatályba lépnek.</p>
+            
+            <br>
+            <br>
+
+            <h5>9. Egyéb Rendelkezések</h5>
+
+            <p>Amennyiben bármely rendelkezés ezen ÁSZF-ben érvénytelenné válik vagy jogerőtelennek minősül, a többi rendelkezés érvényessége és hatálya nem érintett.</p>
+
+            <br>
+            
+            <p>Ezen ÁSZF elfogadásával a Felhasználó beleegyezik abba, hogy a Szolgáltatóval fennálló jogviszonyára kizárólag ezen ÁSZF-ben foglaltak az irányadóak.</p>
 
           </div>
         </div>

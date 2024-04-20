@@ -59,7 +59,7 @@
           <li class="list-group-item">
             <div class="row">
                   <div class="col-6">
-                       <em>Sub-total</em>
+                       <em>Termékek ára</em>
                   </div>
                   
                   <div class="col-6 text-right">
@@ -68,10 +68,11 @@
              </div>
           </li>
           
+
           <li class="list-group-item">
                <div class="row">
                     <div class="col-6">
-                         <em>Extra</em>
+                         <em>Szállítási költség</em>
                     </div>
 
                     <div class="col-6 text-right">
@@ -83,7 +84,7 @@
           <li class="list-group-item">
                <div class="row">
                     <div class="col-6">
-                         <em>Tax</em>
+                         <em>Fizetőmód általi plusz költség</em>
                     </div>
 
                     <div class="col-6 text-right">
@@ -95,7 +96,7 @@
           <li class="list-group-item">
                <div class="row">
                     <div class="col-6">
-                         <em>Total</em>
+                         <em>Végösszeg</em>
                     </div>
 
                     <div class="col-6 text-right">
@@ -104,17 +105,6 @@
                </div>
           </li>
 
-          <li class="list-group-item">
-               <div class="row">
-                    <div class="col-6">
-                         <em>Deposit payment required</em>
-                    </div>
-
-                    <div class="col-6 text-right">
-                         <strong>$ 0.00</strong>
-                    </div>
-               </div>
-          </li>
         </ul>
 
         <br>
@@ -221,7 +211,7 @@
                         <label class="control-label">
                              <input type="checkbox">
 
-                             Elfogadom az <a href="terms.html" target="_blank">Általános &amp; Szerződési Feltételeket</a>
+                             Elfogadom az <a href="terms.php" target="_blank">Általános &amp; Szerződési Feltételeket</a>
                         </label>
                    </div>
 
