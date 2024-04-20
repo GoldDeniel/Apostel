@@ -17,7 +17,7 @@
 
                 <li class="nav-item active">
                   <a class="nav-link" href="contact.php">Kapcsolat
-                    <span class="sr-only">(current)</span>
+                    <span class="sr-only">*</span>
                   </a>
                 </li> 
 

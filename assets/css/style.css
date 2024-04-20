@@ -997,7 +997,10 @@ footer .inner-content p a {
 .section .section-heading {
 	margin-bottom: 45px;
 }
-
+.register-page {
+	margin-top: 100px;
+	color:#f0cc00
+}
 
 /* Responsive Style */
 @media (max-width: 768px) {
