@@ -22,6 +22,18 @@
                 </li> 
 
                 <li class="nav-item"><a class="nav-link" href="checkout.php">Kosár</a></li>
+
+                <?php
+
+                if (isset($_COOKIE['user'])) {
+
+                    echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"favorites.php\">Kedvencek</a></li>";
+                    echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"logout.php\">Kijelentkezés</a></li>";
+                }
+                else {
+                    echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"authentication_page.php\">Bejelentkezés/Regisztráció</a></li>";
+                }
+                ?>
             </ul>
           </div>
         </div>

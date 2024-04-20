@@ -401,6 +401,12 @@ header .navbar {
 .product-item {
 	border: 1px solid #eee;
 	margin-bottom: 30px;
+	background-color: aliceblue;
+	border-radius: 10px;
+}
+
+.product-item a img {
+	border-radius: 10px;
 }
 
 .product-item .down-content {
