@@ -1,101 +1,100 @@
 <?php
 
-    require_once('credentials.php');  
+require_once('credentials.php');
 
-    if (isset($_POST['login'])){
-        
-        if (isset($_POST['email']) && isset($_POST['password']))
-        {
+function redirect($url) {
+    header("Location: $url");
+    exit();
+}
 
-            $conn = new PDO(
-                'mysql:host=localhost;dbname='.DB_NAME.';charset=utf8',
-                DB_NAME,
-                DB_PASSWORD
-            );
+function showError($message) {
+    echo $message;
+    exit();
+}
+
+function hashPassword($password) {
+    return sha1($password); // bcrypt would be better
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    $conn = new PDO(
+        'mysql:host=localhost;dbname=' . DB_NAME . ';charset=utf8',
+        DB_NAME,
+        DB_PASSWORD,
+        [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
+    );
+
+    if (isset($_POST['login'])) {
+        if (isset($_POST['email'], $_POST['password'])) {
             $email = $_POST['email'];
-            $password = SHA1($_POST['password']);
-            $sql = "SELECT * FROM Users WHERE email = '$email' AND password_hash  = '$password'"; 
-            $res = $conn -> query($sql);
-            $records = $res -> fetchAll(PDO::FETCH_ASSOC);
-            if (count($records) > 0)
-            {
+            $password = hashPassword($_POST['password']);
+            $stmt = $conn->prepare("SELECT * FROM Users WHERE email = ? AND password_hash = ?");
+            $stmt->execute([$email, $password]);
+            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+            if ($user) {
                 session_start();
-                $_SESSION['user'] = $records[0];
-                header('Location: index.php');
-                setcookie('user', json_encode($records[0]), time() + 3600);
+                $_SESSION['user'] = $user;
+                setcookie('user', json_encode($user), time() + 3600);
+                redirect('index.php');
+            } else {
+                showError("Sikertelen bejelentkezés!");
             }
-            else
-            {
-                echo "Sikertelen bejelentkezés!";
-            }
-            $conn = null;
         }
-    } else if (isset($_POST['register'])) {
-
-
-        // Registration logic
-        if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['passwordConfirmation']) && isset($_POST['username']) ) {
-            
-            $conn = new PDO( 
-                'mysql:host=localhost;dbname=' . DB_NAME . ';charset=utf8',
-                DB_NAME,
-                DB_PASSWORD
-            );
+    } elseif (isset($_POST['register'])) {
+        if (isset($_POST['email'], $_POST['password'], $_POST['passwordConfirmation'], $_POST['username'])) {
             $email = $_POST['email'];
             $username = $_POST['username'];
-            $password = SHA1($_POST['password']); // bcrypt would be better tho
+            $password = $_POST['password'];
+            $passwordConfirmation = $_POST['passwordConfirmation'];
 
-            // **** CREDENTIAL CHECK ****
-
-            if ($_POST['password'] !== $_POST['passwordConfirmation']) {
-                echo "Passwords do not match!";
-                return;
+            // Credential Check
+            if ($password !== $passwordConfirmation) {
+                showError("Passwords do not match!");
             }
 
-            if (strlen($_POST['password']) < 8) {
-                echo "Password must be at least 8 characters long!";
-                return;
+            if (strlen($password) < 8) {
+                showError("Password must be at least 8 characters long!");
             }
 
-            if (strlen($_POST['username']) < 3) {
-                echo "Username must be at least 3 characters long!";
-                return;
+            if (strlen($username) < 3) {
+                showError("Username must be at least 3 characters long!");
+            }
+            // End of Credential Check
+
+            $hashedPassword = hashPassword($password);
+            $stmt = $conn->prepare("SELECT * FROM Users WHERE email = ?");
+            $stmt->execute([$email]);
+            if ($stmt->fetch(PDO::FETCH_ASSOC)) {
+                showError("Email already registered!");
             }
 
-            // **** END OF CREDENTIAL CHECK ****
-
-            // check if user already exists
-            $sql = "SELECT * FROM Users WHERE email = '$email'";
-            $res = $conn->query($sql);
-            $records = $res->fetchAll(PDO::FETCH_ASSOC);
+            $stmt = $conn->prepare("SELECT * FROM Users WHERE username = ?");
+            $stmt->execute([$username]);
+            if ($stmt->fetch(PDO::FETCH_ASSOC)) {
+                showError("User already exists!");
+            }
             
 
-            if (count($records) > 0) {
-                echo "User already exists!";
-                return;
-            }
-
-            $sql = "INSERT INTO Users (email, password_hash, username) VALUES ('$email', '$password', '$username')";
-            $result = $conn->exec($sql);
-            if ($result !== false) {
-
-                // Login the user after registration
-                $sql = "SELECT * FROM Users WHERE email = '$email' AND password_hash  = '$password'";
-                $res = $conn -> query($sql);
-                $records = $res -> fetchAll(PDO::FETCH_ASSOC);
+            $stmt = $conn->prepare("INSERT INTO Users (email, password_hash, username) VALUES (?, ?, ?)");
+            if ($stmt->execute([$email, $hashedPassword, $username])) {
+                $stmt = $conn->prepare("SELECT * FROM Users WHERE email = ? AND password_hash = ?");
+                $stmt->execute([$email, $hashedPassword]);
+                $user = $stmt->fetch(PDO::FETCH_ASSOC);
                 session_start();
-                $_SESSION['user'] = $records[0];
-                setcookie('user', json_encode($records[0]), time() + 3600);
-
-                header('Location: index.php');
+                $_SESSION['user'] = $user;
+                setcookie('user', json_encode($user), time() + 3600);
+                redirect('index.php');
             } else {
-                echo "Registration failed!"; // TODO: Tell the user in a nicer way
+                showError("Registration failed!");
             }
-            $conn = null;
+
+            // TODO: Ezeket a szornyuen kinezo uzeneteket valahogy szebben kellene megjeleniteni, ez frontend resz Jani, good luck :)
         }
     }
-
+}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
