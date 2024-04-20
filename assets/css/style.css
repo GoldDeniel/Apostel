@@ -401,6 +401,12 @@ header .navbar {
 .product-item {
 	border: 1px solid #eee;
 	margin-bottom: 30px;
+	background-color: aliceblue;
+	border-radius: 10px;
+}
+
+.product-item a img {
+	border-radius: 10px;
 }
 
 .product-item .down-content {
@@ -991,7 +997,10 @@ footer .inner-content p a {
 .section .section-heading {
 	margin-bottom: 45px;
 }
-
+.register-page {
+	margin-top: 100px;
+	color:#f0cc00
+}
 
 /* Responsive Style */
 @media (max-width: 768px) {
