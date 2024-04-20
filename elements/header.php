@@ -33,6 +33,11 @@
                 else {
                     echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"authentication_page.php\">Bejelentkezés/Regisztráció</a></li>";
                 }
+                
+                // if (strpos($_SERVER['REQUEST_URI'], 'favorites.php') !== false) {
+                //   echo "You are in favorites.php";
+                // }
+
                 ?>
             </ul>
           </div>

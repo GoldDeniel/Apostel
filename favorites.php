@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 
   <head>
 
@@ -11,7 +11,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>PHPJabbers.com | Free Online Store Website Template</title>
+    <title>Kedvencek</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -77,7 +77,10 @@
         foreach ($records as $record) {
 
           $prize = $record['price'] == 0 ? "<span style=\"color: red\">Out of stock</span>" : "$".$record['price'];
+          // remove from favorites
 
+          $button = "<div class=\"text-center\"><a method=\"POST\" href=\"add_remove_favorite.php?beer_id=".$record['id']."\" class=\"btn btn-danger\">Törlés</a></div>";
+          
           echo 
           "
             <div class=\"col-md-4\">
@@ -87,6 +90,9 @@
                   <a href=\"product-details.php\"><h4>".$record['label']."</h4></a>
                   <h6>".$prize."</h6>
                   <p>".$record['description']."</p>
+                  <div class=\"text-center\">
+                    $button
+                  </div>
                 </div>
               </div>
             </div>
