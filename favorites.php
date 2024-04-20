@@ -66,7 +66,9 @@
           DB_NAME,
           DB_PASSWORD
       );
-        $sql = "SELECT * FROM (Favorites INNER JOIN Users ON Users.id = Favorites.user_id) INNER JOIN Beers ON Beers.id = Favorites.beer_id";
+      $user = json_decode($_COOKIE['user'], true);
+      $userId = $user['id'];
+        $sql = "SELECT * FROM (Favorites INNER JOIN Users ON Users.id = Favorites.user_id) INNER JOIN Beers ON Beers.id = Favorites.beer_id WHERE Users.id = $userId";
 
         $res = $conn -> query($sql);
         $records = $res -> fetchAll(PDO::FETCH_ASSOC);
