@@ -24,15 +24,22 @@
                 <li class="nav-item"><a class="nav-link" href="checkout.php">Kosár</a></li>
 
                 <?php
+                require_once ('credentials.php');
 
-                if (isset($_COOKIE['user'])) {
+                if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true) {
 
                     echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"favorites.php\">Kedvencek</a></li>";
+                    // logged in as: ".$_SESSION['username'];
                     echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"logout.php\">Kijelentkezés</a></li>";
                 }
                 else {
                     echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"authentication_page.php\">Bejelentkezés/Regisztráció</a></li>";
                 }
+                
+                // if (strpos($_SERVER['REQUEST_URI'], 'favorites.php') !== false) {
+                //   echo "You are in favorites.php";
+                // }
+
                 ?>
             </ul>
           </div>
