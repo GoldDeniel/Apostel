@@ -74,7 +74,7 @@
           $prize = $record_beer['price'] == 0 ? "<span style=\"color: red\">Out of stock</span>" : "$".$record_beer['price'];
           // remove from favorites
 
-          $button = "<div class=\"text-center\"><button class=\"btn btn-danger\" product_id={$record_beer['id']}>Törlés</a></div>";
+          $button = "<div class=\"text-center\"><button class=\"btn btn-danger remove-favorite-button\" product_id={$record_beer['id']}>Törlés</a></div>";
           
           echo 
           "
@@ -93,7 +93,7 @@
             </div>
           ";
         }
-        
+        echo "<script src=\"assets/js/product_list.js\"></script>";
         $conn = null;
         ?>
         
