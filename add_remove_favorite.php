@@ -10,8 +10,8 @@ $conn = new PDO(
 
 if (isset($_GET['beer_id'])) {
     $beerid = $_GET['beer_id'];
-    $user = json_decode($_COOKIE['user'], true);
-    $userid = $user['id'];
+    $user = json_decode($_SESSION['username'], true);
+    $userid = $_SESSION['user_id'];
 
     $sql = "SELECT * FROM Favorites WHERE user_id = $userid AND beer_id = $beerid";
     $res = $conn -> query($sql);

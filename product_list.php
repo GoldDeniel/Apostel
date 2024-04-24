@@ -12,8 +12,8 @@
 
           $prize = $record['price'] == 0 ? "<span style=\"color: red\">Out of stock</span>" : "$".$record['price'];
           
-          $button = $record['price'] == 0 ? "" : "<button class=\"btn btn-warning add-to-cart-button\" product_id=\"{$record['id']}\">Add to cart</button>";
-
+          $button_to_cart = $record['price'] == 0 ? "" : "<button class=\"btn btn-primary add-to-cart-button\" product_id=\"{$record['id']}\">Add to cart</button>";
+          $button_to_favorties = "<button class=\"btn btn-warning add-to-favorites-button\" product_id=\"{$record['id']}\">Add to favorites</button>";
           $num_selector = $record['price'] == 0 ? "" : "        <input type=\"number\" class=\"mb-3\" min=\"1\" max=\"100\" value=\"1\" class=\"quantity-selector\" product_id=\"{$record['id']}\">
           ";
 
@@ -27,7 +27,8 @@
                   <h6>".$prize."</h6>
                   <p>".$record['description']."</p>
                   $num_selector
-                  $button
+                  $button_to_cart
+                  $button_to_favorties
                 </div>
               </div>
             </div>

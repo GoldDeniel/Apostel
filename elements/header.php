@@ -29,7 +29,7 @@
                 if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true) {
 
                     echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"favorites.php\">Kedvencek</a></li>";
-                    // logged in as: ".$_SESSION['username'];
+                    echo "<span style=\"color: white\">logged in as: ".$_SESSION['username']."</span>";
                     echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"logout.php\">Kijelentkezés</a></li>";
                 }
                 else {

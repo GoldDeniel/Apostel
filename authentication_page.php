@@ -15,8 +15,9 @@ function login(){
         
         if (count($records) === 1) {
             $_SESSION['is_logged_in'] = true;
-            $_SESSION['name'] = $records[0]['name'];
+            $_SESSION['username'] = $records[0]['username'];
             $_SESSION['email'] = $records[0]['email'];
+            $_SESSION['user_id'] = $records[0]['id'];
             
             header('Location: index.php');
         }

@@ -61,25 +61,20 @@
         <?php
         
         require_once 'credentials.php';
-        $conn = new PDO(
-          'mysql:host=localhost;dbname='.DB_NAME.';charset=utf8',
-          DB_NAME,
-          DB_PASSWORD
-      );
-      $user = json_decode($_COOKIE['user'], true);
-      $userId = $user['id'];
-        $sql = "SELECT * FROM (Favorites INNER JOIN Users ON Users.id = Favorites.user_id) INNER JOIN Beers ON Beers.id = Favorites.beer_id WHERE Users.id = $userId";
-
+        $conn = get_connection();
+        
+        $user = $_SESSION['username'];
+        var_dump($user);
+        $sql = "SELECT * FROM Beers INNER JOIN Favorites ON Beers.id = Favorites.beer_id WHERE Favorites.user_id = (SELECT id FROM Users WHERE username = '$user') ORDER BY Beers.label";
         $res = $conn -> query($sql);
         $records = $res -> fetchAll(PDO::FETCH_ASSOC);
         //var_dump($records);
-        
         foreach ($records as $record) {
 
           $prize = $record['price'] == 0 ? "<span style=\"color: red\">Out of stock</span>" : "$".$record['price'];
           // remove from favorites
 
-          $button = "<div class=\"text-center\"><a method=\"POST\" href=\"add_remove_favorite.php?beer_id=".$record['id']."\" class=\"btn btn-danger\">Törlés</a></div>";
+          $button = "<div class=\"text-center\"><button class=\"btn btn-danger\" product_id={$record['id']}>Törlés</a></div>";
           
           echo 
           "
@@ -98,7 +93,6 @@
             </div>
           ";
         }
-        // $conn -> close();
         
         $conn = null;
         ?>
