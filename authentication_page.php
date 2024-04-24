@@ -57,7 +57,6 @@ function register(){
             return;
         }
         // ezeket at kell vinni javascript-be
-
         $conn = get_connection();
         $sql = "INSERT INTO Users (username, email, password_hash) VALUES ('{$_POST['username']}', '{$_POST['email']}', SHA1('{$_POST['password']}'))";
         $conn->exec($sql);

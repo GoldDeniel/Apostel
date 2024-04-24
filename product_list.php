@@ -1,11 +1,7 @@
 <?php
         
         require_once 'credentials.php';
-        $conn = new PDO(
-          'mysql:host=localhost;dbname='.DB_NAME.';charset=utf8',
-          DB_NAME,
-          DB_PASSWORD
-      );
+        $conn = get_connection();
         $sql = "SELECT * FROM Beers ORDER BY id";
 
         $res = $conn -> query($sql);
@@ -16,14 +12,10 @@
 
           $prize = $record['price'] == 0 ? "<span style=\"color: red\">Out of stock</span>" : "$".$record['price'];
           
-          // if user has favorited the product, show remove button, else show add button
-          $user = json_decode($_COOKIE['user'], true);
-          $userId = $user['id'];
-          $sql = "SELECT * FROM Favorites WHERE user_id = $userId AND beer_id = ".$record['id'];
-          $res = $conn -> query($sql);
-          $records = $res -> fetchAll(PDO::FETCH_ASSOC);
-          $button = count($records) == 0 ? "<a method=\"POST\" href=\"add_remove_favorite.php?beer_id=".$record['id']."\" class=\"btn btn-primary\">Add to favorites</a>" : "<a method=\"POST\" href=\"add_remove_favorite.php?beer_id=".$record['id']."\" class=\"btn btn-danger\">Remove from favorites</a>";
+          $button = $record['price'] == 0 ? "" : "<button class=\"btn btn-warning add-to-cart-button\" product_id=\"{$record['id']}\">Add to cart</button>";
 
+          $num_selector = $record['price'] == 0 ? "" : "        <input type=\"number\" class=\"mb-3\" min=\"1\" max=\"100\" value=\"1\" class=\"quantity-selector\" product_id=\"{$record['id']}\">
+          ";
 
           echo 
           "
@@ -34,12 +26,14 @@
                   <a href=\"product-details.php\"><h4>".$record['label']."</h4></a>
                   <h6>".$prize."</h6>
                   <p>".$record['description']."</p>
+                  $num_selector
                   $button
                 </div>
               </div>
             </div>
           ";
         }
+        echo "<script src=\"assets/js/product_list.js\"></script>";
         // $conn -> close();
         
         $conn = null;
