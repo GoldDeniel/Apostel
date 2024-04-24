@@ -2,6 +2,7 @@
         
         require_once 'credentials.php';
         $conn = get_connection();
+        $conn = get_connection();
         $sql = "SELECT * FROM Beers ORDER BY id";
 
         $res = $conn -> query($sql);
