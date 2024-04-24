@@ -88,19 +88,19 @@
         $records = $res->fetchAll(PDO::FETCH_ASSOC);
         //var_dump($records);
         
-        foreach ($records as $record) {
+        foreach ($records as $record_beer) {
 
-          $prize = $record['price'] == 0 ? "<span style=\"color: red\">Out of stock</span>" : "$" . $record['price'];
+          $prize = $record_beer['price'] == 0 ? "<span style=\"color: red\">Out of stock</span>" : "$" . $record_beer['price'];
 
           echo
             "
             <div class=\"col-md-4\">
               <div class=\"product-item\">
-                <a href=\"product-details.php\"><img src=\"assets/images/" . $record['img_url'] . "\"></a>
+                <a href=\"product-details.php\"><img src=\"assets/images/" . $record_beer['img_url'] . "\"></a>
                 <div class=\"down-content\">
-                  <a href=\"product-details.php\"><h4>" . $record['label'] . "</h4></a>
+                  <a href=\"product-details.php\"><h4>" . $record_beer['label'] . "</h4></a>
                   <h6>" . $prize . "</h6>
-                  <p>" . $record['description'] . "</p>
+                  <p>" . $record_beer['description'] . "</p>
                 </div>
               </div>
             </div>
