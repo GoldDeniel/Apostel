@@ -80,11 +80,7 @@
           <?php
         
         require_once 'credentials.php';
-        $conn = new PDO(
-          'mysql:host=localhost;dbname='.DB_NAME.';charset=utf8',
-          DB_NAME,
-          DB_PASSWORD
-      );
+        $conn = get_connection();
         $sql = "SELECT * FROM Beers ORDER BY id LIMIT 6";
 
         $res = $conn -> query($sql);

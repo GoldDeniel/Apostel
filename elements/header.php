@@ -25,7 +25,7 @@
 
                 <?php
 
-                if (isset($_COOKIE['user'])) {
+                if (isset($_SESSION['user'])) {
 
                     echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"favorites.php\">Kedvencek</a></li>";
                     echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"logout.php\">Kijelentkezés</a></li>";

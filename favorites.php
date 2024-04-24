@@ -61,12 +61,8 @@
         <?php
         
         require_once 'credentials.php';
-        $conn = new PDO(
-          'mysql:host=localhost;dbname='.DB_NAME.';charset=utf8',
-          DB_NAME,
-          DB_PASSWORD
-      );
-      $user = json_decode($_COOKIE['user'], true);
+        $conn = get_connection();
+      $user = json_decode($_SESSION['user'], true);
       $userId = $user['id'];
         $sql = "SELECT * FROM (Favorites INNER JOIN Users ON Users.id = Favorites.user_id) INNER JOIN Beers ON Beers.id = Favorites.beer_id WHERE Users.id = $userId";
 
