@@ -10,7 +10,7 @@ p {
 	margin-bottom: 0px;
 	font-size: 14px;
 	font-weight: 300;
-	color: #f0cc00;
+	color: black;
 	line-height: 24px;
 }
 a {
@@ -72,6 +72,10 @@ a.filled-button {
 a.filled-button:hover {
 	background-color: #f0cc00;
 	color: #fff;
+}
+
+p.secondary-color{
+	color: #f0cc00;
 }
 
 .section-heading {
@@ -777,7 +781,12 @@ footer .inner-content p a {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
+	background-image: url(../../assets/images/beer_blog.jpg);
+	backdrop-filter: blur(6.8px);
+
 	padding: 100px 0px;
+	border-radius: 10px;
+	margin-top: 1rem;
 }
 
 .services .section-heading h2 { 
@@ -787,6 +796,7 @@ footer .inner-content p a {
 .service-item {
 	text-align: center;
 	margin-bottom: 30px;
+	border-radius: 10px;
 }
 
 .service-item .icon {
@@ -808,24 +818,33 @@ footer .inner-content p a {
 .service-item .down-content {
 	background-color: #fff;
 	padding: 40px 30px;
+	border-radius: 0px 0px 10px 10px;
+
 }
 
 .service-item .down-content h4 {
 	font-size: 17px;
 	color: #1a6692;
 	margin-bottom: 20px;
+	border-radius: 10px;
+
 }
 
 .service-item .down-content h6 { 
 	margin-bottom: 15px;
+	border-radius: 10px;
+
 }
 
 .service-item .down-content p {
 	margin-bottom: 25px;
+	border-radius: 10px;
+
 }
 
 .services-item-image { 
 	display: block; 
+	border-radius: 10px;
 }
 
 .n-m { 
@@ -843,7 +862,9 @@ footer .inner-content p a {
 .owl-clients button.owl-dot.active { 
 	background: #f0cc00!important; 
 }
-
+.round-top {
+	border-radius: 10px 10px 0 0;
+}
 /* Clients */
 
 .happy-clients {
@@ -1002,6 +1023,15 @@ footer .inner-content p a {
 
 .section .section-heading {
 	margin-bottom: 45px;
+}
+.login-box {
+	background: rgba(0, 0, 0, 0.27);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(6.8px);
+	-webkit-backdrop-filter: blur(6.8px);
+	border: 1px solid rgba(0, 0, 0, 0.27);
+	padding: 1rem;
 }
 .register-page {
 	margin-top: 100px;

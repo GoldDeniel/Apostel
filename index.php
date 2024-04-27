@@ -121,20 +121,20 @@
           </div>
           <div class="col-md-6">
             <div class="left-content">
-              <p>Ismerd meg az ApostHell söröket - a minőség és szenvedély tökéletes összhangját! Kézműves szakértelemmel készítettünk kiváló minőségű söröket, hogy minden korty egy különleges utazás legyen az igazi ízek birodalmába. Fedezd fel a sörkultúra új csúcsait velünk!</p>
+              <p class="secondary-color">Ismerd meg az ApostHell söröket - a minőség és szenvedély tökéletes összhangját! Kézműves szakértelemmel készítettünk kiváló minőségű söröket, hogy minden korty egy különleges utazás legyen az igazi ízek birodalmába. Fedezd fel a sörkultúra új csúcsait velünk!</p>
               <a href="about-us.php" class="filled-button">Tudj meg többet</a>
             </div>
           </div>
           <div class="col-md-6">
             <div class="right-image">
-              <img src="assets/images/unnamed_stock_photo3.jpeg" alt="">
+              <img src="assets/images/unnamed_stock_photo3.jpeg" class="round-top" alt="">
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="services" style="background-image: url(assets/images/beer_blog.jpg);" >
+    <div class="services" >
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -198,7 +198,7 @@
             <div class="owl-clients owl-carousel text-center">
               <div class="service-item">
                 <div class="services-item-image">
-                  <img src="assets/images/elon_musk_beer.jpg" alt=""></i>
+                  <img src="assets/images/elon_musk_beer.jpg" class="round-top" alt=""></i>
                 </div>
                 <div class="down-content">
                   <h4>Elon Musk</h4>
@@ -208,7 +208,7 @@
               
               <div class="service-item">
                 <div class="services-item-image">
-                  <img src="assets/images/mark_zuck_beer.jpg" alt=""></i>
+                  <img src="assets/images/mark_zuck_beer.jpg" class="round-top" alt=""></i>
                 </div>
                 <div class="down-content">
                   <h4>Mark Zuckerberg</h4>
@@ -218,7 +218,7 @@
               
               <div class="service-item">
                 <div class="services-item-image">
-                  <img src="assets/images/damu_roland_beer.png" alt=""></i>
+                  <img src="assets/images/damu_roland_beer.png" class="round-top" alt=""></i>
                 </div>
                 <div class="down-content">
                   <h4>Damu Roland</h4>

@@ -70,7 +70,7 @@
           <div class="col-md-6">
             <div class="left-content">
               <h4 color:gold>Ha a valós minőséget akarod képviselni</h4>
-              <p>Az ApostHell sört választani egyértelmű döntés a minőség és az élvezet jegyében. Ez a magyar kézműves sör kiváló minőségű összetevőkből készül, és a receptúra gondos odafigyeléssel alkotott. Az ApostHell nem csupán egy ital, hanem egy élmény, amely megédesíti az élet pillanatait. Finom ízvilága minden kort és ízlést megnyer, és egyedi jellegével a különlegességet képviseli a sörpiac palettáján. A választás az ApostHell mellett tehát nem csupán egy sör melletti döntés, hanem egy minőségi életstílusra való voksolás is.</p>
+              <p class="secondary-color">Az ApostHell sört választani egyértelmű döntés a minőség és az élvezet jegyében. Ez a magyar kézműves sör kiváló minőségű összetevőkből készül, és a receptúra gondos odafigyeléssel alkotott. Az ApostHell nem csupán egy ital, hanem egy élmény, amely megédesíti az élet pillanatait. Finom ízvilága minden kort és ízlést megnyer, és egyedi jellegével a különlegességet képviseli a sörpiac palettáján. A választás az ApostHell mellett tehát nem csupán egy sör melletti döntés, hanem egy minőségi életstílusra való voksolás is.</p>
               <ul class="social-icons">
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>

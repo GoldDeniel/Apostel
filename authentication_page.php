@@ -57,7 +57,7 @@ function register(){
             echo 'Email address or username already in use!';
             return;
         }
-        // ezeket at kell vinni javascript-be
+        // ezeket at kell vinni javascript-be, vagy nem, mert mar hasznaltam fetch-t adatbazis feltoltesre
         $conn = get_connection();
         $sql = "INSERT INTO Users (username, email, password_hash) VALUES ('{$_POST['username']}', '{$_POST['email']}', SHA1('{$_POST['password']}'))";
         $conn->exec($sql);
@@ -127,41 +127,43 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="row">
             <div class="col-12 register-page">
 
-                <form action="" class="w-50 mx-auto" method="POST" id="loginForm">
-                    <h3 class="mt-3">Bejelentkezés</h1>
+                <form action="" class="w-50 mx-auto login-box" method="POST" id="loginForm">
                     <div class="form-group">
-                        <label for="">Email</label>
-                        <input type="email" name="email" id="email">
+                        <h2 class="mt-3 mb-3" >Bejelentkezés</h2>
+                        <label for=""><h3>Email</h3></label>
+                        <input class="form-control-lg form-text" type="email" name="email" id="email">
                     </div>
                     <div class="form-group">
-                        <label for="">Jelszó</label>
-                        <input type="password" name="password" id="password">
+                        <label for=""><h3>Jelszó</h3></label>
+                        <input class="form-control-lg form-text" type="password" name="password" id="password">
+                    </div>
+                    <div>
+                        <span>Még nincs fiókod?</span>
+                        <span id="registerSpan" class="btn">
+                            Regisztrálj!
+                        </span>
                     </div>
                     <button type="submit" class="btn btn-primary" name="login">
                         Bejelentkezés
                     </button>
-                    <span>Még nincs fiókod?</span>
-                    <span id="registerSpan" class="btn">
-                        Regisztrálj!
-                    </span>
                 </form>
 
-                <form action="" class="w-50 mx-auto" method="POST" id="registerForm" hidden>
-                    <h3 class="mt-3">Regisztráció</h1>
+                <form action="" class="w-50 mx-auto login-box" method="POST" id="registerForm" hidden>
+                    <h2 class="mt-3 mb-3">Regisztráció</h2>
                     <div class="form-group">
-                        <label for="">Felhasználónév</label>
+                        <label for=""><h3>Felhasználónév</h3></label><br>
                         <input type="text" name="username" id="username">
                     </div>
                     <div class="form-group">
-                        <label for="">Email</label>
+                        <label for=""><h3>Email</h3></label><br>
                         <input type="email" name="email" id="email">
                     </div>
                     <div class="form-group">
-                        <label for="">Jelszó</label>
+                        <label for=""><h3>Jelszó</h3></label><br>
                         <input type="password" name="password" id="password">
                     </div>
                     <div class="form-group">
-                        <label for="">Jelszó újra:</label>
+                        <label for=""><h3>Jelszó újra:</h3></label><br>
                         <input type="password" name="passwordConfirmation">
                     </div>
                     <button type="submit" class="btn btn-primary" name="register">

@@ -3,7 +3,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="inner-content">
-              <p>Nincs itt lent semmi!</p>
+              <p class="secondary-color">Nincs itt lent semmi!</p>
             </div>
           </div>
         </div>
