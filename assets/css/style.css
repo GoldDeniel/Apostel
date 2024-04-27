@@ -16,6 +16,10 @@ p {
 a {
 	text-decoration: none!important;
 }
+ol li{
+	color: #f0cc00;
+	margin-bottom: 10px;
+}
 ul {
 	padding: 0;
 	margin: 0;
@@ -24,6 +28,7 @@ ul {
 
 h1,h2,h3,h4,h5,h6 {
 	margin: 0px;
+	color: #f0cc00;
 }
 
 ul.social-icons li {
@@ -40,7 +45,7 @@ ul.social-icons li a {
 	height: 50px;
 	display: inline-block;
 	line-height: 50px;
-	background-color: #eee;
+	background-color: #f0cc00;
 	color: #121212;
 	font-size: 18px;
 	text-align: center;
@@ -500,7 +505,7 @@ header .navbar {
 
 .best-features h4 {
 	font-size: 17px;
-	color: #1a6692;
+	color: #f0cc00;
 	margin-bottom: 20px;
 }
 
@@ -878,7 +883,7 @@ footer .inner-content p a {
 
 .find-us h4 {
 	font-size: 17px;
-	color: #1a6692;
+	color: #f0cc00;
 	margin-bottom: 20px;
 }
 

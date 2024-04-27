@@ -30,7 +30,7 @@
 
         foreach ($records_beers as $record_beer) {
 
-          $prize = $record_beer['price'] == 0 ? "<span style=\"color: red\">Out of stock</span>" : "$".$record_beer['price'];
+          $prize = $record_beer['price'] == 0 ? "<span style=\"color: red\">Jelenleg nincs raktáron</span>" : "$".$record_beer['price'];
           
           $button_to_cart = $record_beer['price'] == 0 ? "" : "<button class=\"btn btn-primary add-to-cart-button\" product_id=\"{$record_beer['id']}\">Add to cart</button>";
           $button_to_favorties = 

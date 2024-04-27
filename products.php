@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hun">
 
   <head>
 
@@ -11,7 +11,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>PHPJabbers.com | Free Online Store Website Template</title>
+    <title>ApostHell | Termékek</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -40,13 +40,13 @@
       include 'elements/header.php';
     ?>
     <!-- Page Content -->
-    <div class="page-heading about-heading header-text" style="background-image: url(assets/images/heading-6-1920x500.jpg);">
+    <div class="page-heading about-heading header-text" style="background-image: url(assets/images/bar_table_3_beers.jpeg);">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="text-content">
-              <h4>Lorem ipsum dolor sit amet</h4>
-              <h2>Products</h2>
+              <h4>Termékek</h4>
+              <h2>A legminőségibb sörök, csak neked</h2>
             </div>
           </div>
         </div>

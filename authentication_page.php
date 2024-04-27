@@ -84,71 +84,99 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="hun">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bejelentkezés</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>ApostHell | Bejelentkezés</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
 </head>
 
 <body>
+    <!-- Header -->
     <?php include 'elements/header.php'; ?>
+
+<!-- Page Content -->
+<div class="page-heading about-heading header-text" style="background-image: url(assets/images/login.jpg);">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-content">
+              <h4>Bejelentkezés/Regisztráció</h4>
+              <h2>Légy ügyfelünk</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
         <div class="row">
             <div class="col-12 register-page">
 
                 <form action="" class="w-50 mx-auto" method="POST" id="loginForm">
-                    <h3 class="mt-3">Login</h1>
-                        <div class="form-group">
-                            <label for="">Email</label>
-                            <input type="email" name="email" id="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="">Password</label>
-                            <input type="password" name="password" id="password">
-                        </div>
-                        <button type="submit" class="btn btn-primary" name="login">
-                            Login
-                        </button>
-                        <span>Don't have an account?</span>
-                        <span id="registerSpan" class="btn">
-                            Register
-                        </span>
+                    <h3 class="mt-3">Bejelentkezés</h1>
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Jelszó</label>
+                        <input type="password" name="password" id="password">
+                    </div>
+                    <button type="submit" class="btn btn-primary" name="login">
+                        Bejelentkezés
+                    </button>
+                    <span>Még nincs fiókod?</span>
+                    <span id="registerSpan" class="btn">
+                        Regisztrálj!
+                    </span>
                 </form>
 
                 <form action="" class="w-50 mx-auto" method="POST" id="registerForm" hidden>
-                    <h3 class="mt-3">Register</h1>
-                        <div class="form-group">
-                            <label for="">Username</label>
-                            <input type="text" name="username" id="username">
-                        </div>
-                        <div class="form-group">
-                            <label for="">Email</label>
-                            <input type="email" name="email" id="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="">Password</label>
-                            <input type="password" name="password" id="password">
-                        </div>
-                        <div class="form-group">
-                            <label for="">Password confirmation:</label>
-                            <input type="password" name="passwordConfirmation">
-                        </div>
-                        <button type="submit" class="btn btn-primary" name="register">
-                            Register
-                        </button>
-                        <span>Already have an account?</span>
-                        <span id="loginSpan" class="btn">
-                            Login
-                        </span>
+                    <h3 class="mt-3">Regisztráció</h1>
+                    <div class="form-group">
+                        <label for="">Felhasználónév</label>
+                        <input type="text" name="username" id="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Jelszó</label>
+                        <input type="password" name="password" id="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Jelszó újra:</label>
+                        <input type="password" name="passwordConfirmation">
+                    </div>
+                    <button type="submit" class="btn btn-primary" name="register">
+                        Regisztráció
+                    </button>
+                    <span>Már van fiókod?</span>
+                    <span id="loginSpan" class="btn">
+                        Jelentkezz be!
+                    </span>
                 </form>
 
             </div>
         </div>
     </div>
+
 
 
     <script src="assets/js/register.js"></script>

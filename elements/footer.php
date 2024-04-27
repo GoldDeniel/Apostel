@@ -3,7 +3,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="inner-content">
-              <p>There is nothing down here!</p>
+              <p>Nincs itt lent semmi!</p>
             </div>
           </div>
         </div>

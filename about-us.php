@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hun">
 
   <head>
 
@@ -11,7 +11,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>ApostHell | About us</title>
+    <title>ApostHell | Rólunk</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -40,13 +40,13 @@
       include 'elements/header.php';
     ?>
     <!-- Page Content -->
-    <div class="page-heading about-heading header-text" style="background-image: url(assets/images/heading-1-1920x500.jpg);">
+    <div class="page-heading about-heading header-text" style="background-image: url(assets/images/beer_wide.jpg);">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="text-content">
-              <h4>about us</h4>
-              <h2>our company</h2>
+              <h4>Rólunk</h4>
+              <h2>A cégünkről bővebben</h2>
             </div>
           </div>
         </div>
@@ -59,18 +59,18 @@
         <div class="row">
           <div class="col-md-12">
             <div class="section-heading">
-              <h2>Lorem ipsum dolor sit amet consectetur adipisicing</h2>
+              <h2>Miért a mi sörünket válaszd?</h2>
             </div>
           </div>
           <div class="col-md-6">
             <div class="right-image">
-              <img src="assets/images/about-1-570x350.jpg" alt="">
+              <img src="assets/images/cinematic_beer.jpeg" alt="">
             </div>
           </div>
           <div class="col-md-6">
             <div class="left-content">
-              <h4>Lorem ipsum dolor sit amet.</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat. Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis.</p>
+              <h4 color:gold>Ha a valós minőséget akarod képviselni</h4>
+              <p>Az ApostHell sört választani egyértelmű döntés a minőség és az élvezet jegyében. Ez a magyar kézműves sör kiváló minőségű összetevőkből készül, és a receptúra gondos odafigyeléssel alkotott. Az ApostHell nem csupán egy ital, hanem egy élmény, amely megédesíti az élet pillanatait. Finom ízvilága minden kort és ízlést megnyer, és egyedi jellegével a különlegességet képviseli a sörpiac palettáján. A választás az ApostHell mellett tehát nem csupán egy sör melletti döntés, hanem egy minőségi életstílusra való voksolás is.</p>
               <ul class="social-icons">
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -89,15 +89,15 @@
         <div class="row">
           <div class="col-md-12">
             <div class="section-heading">
-              <h2>Lorem ipsum dolor sit amet.</h2>
+              <h2>Hogyan készítjük söreinket?</h2>
             </div>
-
-            <h5>Lorem ipsum dolor sit amet.</h5>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat. Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis.</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo quae eveniet tempora reprehenderit quo, necessitatibus vel sit laboriosam, sunt obcaecati quisquam explicabo voluptatibus earum facilis quidem fuga maiores. Quasi, obcaecati? <br><br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, est officiis. Ipsam quas consequuntur adipisci quis, fuga pariatur eius eveniet qui similique nulla inventore accusantium, suscipit asperiores quibusdam culpa iure!</p>
-          </div>
+            <ol>
+              <li>Az ApostHell sör megalkotása minden lépésében a tökéletesség iránti elkötelezettséget tükrözi. A folyamat már az alapanyagok kiválasztásával kezdődik, ahol a legjobb minőségű malátát és komlót választják ki, hogy az ízek és aromák tökéletes harmóniáját érjék el.</li>
+              <li>A recept elkészítésekor a sörfőzőmester szakértelme és szenvedélye mindent áthat, miközben gondosan méri és keveri össze az összetevőket. A pontos arányok és a hőmérséklet precíz szabályozása elengedhetetlen a kívánt ízprofil eléréséhez.</li>
+              <li>A erjesztés folyamata során a sörmester szinte mint egy művész figyeli a sör fejlődését, gondoskodva arról, hogy minden egyes lépésnél a legmagasabb minőséget érjék el. A hosszú érlelési idő és a megfelelő környezeti feltételek biztosítják, hogy az ízek kiegyensúlyozottak legyenek, és az ApostHell egyedülálló karakterét megőrizzék.</li>
+              <li>Végül a sör palackozása és címkézése is ugyanolyan gondosan történik, hogy a vásárlók a legjobb minőséget kapják a kézhezvételekor. Az ApostHell sör elkészítése minden egyes lépésében a hagyomány és a modern sörfőzés legjobb gyakorlatait ötvözi, így garantálva az élvezet teljes spektrumát minden kort és ízlést illetően.</li>
+            </ol>
+            </div>
         </div>
       </div>
     </div>

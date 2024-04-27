@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
     rel="stylesheet">
 
-  <title>ApostHell</title>
+    <title>ApostHell | Kezdőlap</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -90,7 +90,7 @@
         
         foreach ($records as $record_beer) {
 
-          $prize = $record_beer['price'] == 0 ? "<span style=\"color: red\">Out of stock</span>" : "$" . $record_beer['price'];
+          $prize = $record['price'] == 0 ? "<span style=\"color: red\">Jelenleg nincs raktáron</span>" : "$".$record['price'];
 
           echo
             "
@@ -111,197 +111,147 @@
         $conn = null;
         ?>
 
-        <div class="best-features">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="section-heading">
-                  <h2>About Us</h2>
-                </div>
+    <div class="best-features">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>Rólunk</h2>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="left-content">
+              <p>Ismerd meg az ApostHell söröket - a minőség és szenvedély tökéletes összhangját! Kézműves szakértelemmel készítettünk kiváló minőségű söröket, hogy minden korty egy különleges utazás legyen az igazi ízek birodalmába. Fedezd fel a sörkultúra új csúcsait velünk!</p>
+              <a href="about-us.php" class="filled-button">Tudj meg többet</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="right-image">
+              <img src="assets/images/unnamed_stock_photo3.jpeg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="services" style="background-image: url(assets/images/beer_blog.jpg);" >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>Legfrissebb posztjaink</h2>
+
+              <a href="blog.php">továbbiak<i class="fa fa-angle-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item">
+              <a href="#" class="services-item-image"><img src="assets/images/product-2.jpeg" class="img-fluid" alt=""></a>
+
+              <div class="down-content">
+                <h4><a href="#">Elkészítettük a kéréseitek alapján várva-várt legújabb sörünket, a HolyHell-t</a></h4>
+
+                <p style="margin: 0;"> Dániel Arany &nbsp;&nbsp;|&nbsp;&nbsp; 10/05/2024 08:11 </p>
               </div>
-              <div class="col-md-6">
-                <div class="left-content">
-                  <p>Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipisicing elit. Explicabo, esse
-                    consequatur alias repellat in excepturi inventore ad <a href="#">asperiores</a> tempora ipsa.
-                    Accusantium tenetur voluptate labore aperiam molestiae rerum excepturi minus in pariatur
-                    praesentium, corporis, aliquid dicta.</p>
-                  <ul class="featured-list">
-                    <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                    <li><a href="#">Consectetur an adipisicing elit</a></li>
-                    <li><a href="#">It aquecorporis nulla aspernatur</a></li>
-                    <li><a href="#">Corporis, omnis doloremque</a></li>
-                  </ul>
-                  <a href="about-us.php" class="filled-button">Read More</a>
-                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item">
+              <a href="#" class="services-item-image"><img src="assets/images/beer-2.jpg" class="img-fluid" alt=""></a>
+
+              <div class="down-content">
+                <h4><a href="#">Kikértük a véleményeteket: ezeket a dolgokat kértétek, hogy jellemezzék a legújabb sörünket</a></h4>
+
+                <p style="margin: 0;"> János Orsós &nbsp;&nbsp;|&nbsp;&nbsp; 20/04/2024 11:25 </p>
               </div>
-              <div class="col-md-6">
-                <div class="right-image">
-                  <img src="assets/images/unnamed_stock_photo3.jpeg" alt="">
-                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item">
+              <a href="#" class="services-item-image"><img src="assets/images/beer-delivery-logo.jpg" class="img-fluid" alt=""></a>
+
+              <div class="down-content">
+                <h4><a href="#">Bővültek szállítási lehetőségeink, most már két újabb országban is élvezhetik söreinket</a></h4>
+
+                <p style="margin: 0;"> János Orsós &nbsp;&nbsp;|&nbsp;&nbsp; 12/04/2024 16:46</p>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="services" style="background-image: url(assets/images/other-image-fullscren-1-1920x900.jpg);">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="section-heading">
-                  <h2>Latest blog posts</h2>
-
-                  <a href="blog.php">read more <i class="fa fa-angle-right"></i></a>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6">
-                <div class="service-item">
-                  <a href="#" class="services-item-image"><img src="assets/images/blog-1-370x270.jpg" class="img-fluid"
-                      alt=""></a>
-
-                  <div class="down-content">
-                    <h4><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit hic</a></h4>
-
-                    <p style="margin: 0;"> John Doe &nbsp;&nbsp;|&nbsp;&nbsp; 12/06/2020 10:30 &nbsp;&nbsp;|&nbsp;&nbsp;
-                      114</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="service-item">
-                  <a href="#" class="services-item-image"><img src="assets/images/blog-2-370x270.jpg" class="img-fluid"
-                      alt=""></a>
-
-                  <div class="down-content">
-                    <h4><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h4>
-
-                    <p style="margin: 0;"> John Doe &nbsp;&nbsp;|&nbsp;&nbsp; 12/06/2020 10:30 &nbsp;&nbsp;|&nbsp;&nbsp;
-                      114</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="service-item">
-                  <a href="#" class="services-item-image"><img src="assets/images/blog-3-370x270.jpg" class="img-fluid"
-                      alt=""></a>
-
-                  <div class="down-content">
-                    <h4><a href="#">Aperiam modi voluptatum fuga officiis cumque</a></h4>
-
-                    <p style="margin: 0;"> John Doe &nbsp;&nbsp;|&nbsp;&nbsp; 12/06/2020 10:30 &nbsp;&nbsp;|&nbsp;&nbsp;
-                      114</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
+    </div>
 
         <!-- Elon musk es tarsai -->
 
-        <div class="happy-clients">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="section-heading">
-                  <h2>Happy Clients</h2>
+    <div class="happy-clients">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>Elégedett ügyfeleink</h2>
 
-                  <a href="testimonials.php">read more <i class="fa fa-angle-right"></i></a>
+              <a href="testimonials.php">továbbiak <i class="fa fa-angle-right"></i></a>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="owl-clients owl-carousel text-center">
+              <div class="service-item">
+                <div class="services-item-image">
+                  <img src="assets/images/elon_musk_beer.jpg" alt=""></i>
+                </div>
+                <div class="down-content">
+                  <h4>Elon Musk</h4>
+                  <p class="n-m"><em>"Amint megízleltem, a kedvenc sörömmé vált az ApostHell. Fiammal, X Æ A-12-al délutánonként csak ezt isszuk!"</em></p>
                 </div>
               </div>
-              <div class="col-md-12">
-                <div class="owl-clients owl-carousel text-center">
-                  <div class="service-item">
-                    <div class="icon">
-                      <i class="fa fa-user"></i>
-                    </div>
-                    <div class="down-content">
-                      <h4>John Doe</h4>
-                      <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis
-                          nulla at quia quaerat."</em></p>
-                    </div>
-                  </div>
+              
+              <div class="service-item">
+                <div class="services-item-image">
+                  <img src="assets/images/mark_zuck_beer.jpg" alt=""></i>
+                </div>
+                <div class="down-content">
+                  <h4>Mark Zuckerberg</h4>
+                  <p class="n-m"><em>"Már a Harvardos óta ezt a sört iszom, sokat segített a Facebook kitalálásához."</em></p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <div class="services-item-image">
+                  <img src="assets/images/damu_roland_beer.png" alt=""></i>
+                </div>
+                <div class="down-content">
+                  <h4>Damu Roland</h4>
+                  <p class="n-m"><em>"Általában amikor már reggel felkelek, hogy pucoljam a marhát, amikor nehogy már olyan nyerjen, aki nem tud főzni, aközben mindig az ApostHellt választom!"</em></p>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-                  <div class="service-item">
-                    <div class="icon">
-                      <i class="fa fa-user"></i>
-                    </div>
-                    <div class="down-content">
-                      <h4>Jane Smith</h4>
-                      <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis
-                          nulla at quia quaerat."</em></p>
-                    </div>
-                  </div>
 
-                  <div class="service-item">
-                    <div class="icon">
-                      <i class="fa fa-user"></i>
-                    </div>
-                    <div class="down-content">
-                      <h4>Antony Davis</h4>
-                      <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis
-                          nulla at quia quaerat."</em></p>
-                    </div>
-                  </div>
-
-                  <div class="service-item">
-                    <div class="icon">
-                      <i class="fa fa-user"></i>
-                    </div>
-                    <div class="down-content">
-                      <h4>John Doe</h4>
-                      <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis
-                          nulla at quia quaerat."</em></p>
-                    </div>
-                  </div>
-
-                  <div class="service-item">
-                    <div class="icon">
-                      <i class="fa fa-user"></i>
-                    </div>
-                    <div class="down-content">
-                      <h4>Jane Smith</h4>
-                      <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis
-                          nulla at quia quaerat."</em></p>
-                    </div>
-                  </div>
-
-                  <div class="service-item">
-                    <div class="icon">
-                      <i class="fa fa-user"></i>
-                    </div>
-                    <div class="down-content">
-                      <h4>Antony Davis</h4>
-                      <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis
-                          nulla at quia quaerat."</em></p>
-                    </div>
-                  </div>
+    <div class="call-to-action">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="inner-content">
+              <div class="row">
+                <div class="col-md-8">
+                  <h4>Jogi nyilatkozat</h4>
+                  <p>Ez az oldal nem létezik, és a sörünknek semmi köze az igazi Apostel sörhöz.</p>
+                </div>
+                <div class="col-lg-4 col-md-6 text-right">
+                  <a href="contact.php" class="filled-button" onclick="alert('I said don\'t!')">Ne lépj velünk kapcsolatba</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-
-        <div class="call-to-action">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="inner-content">
-                  <div class="row">
-                    <div class="col-md-8">
-                      <h4>Disclaimer</h4>
-                      <p>This site is non-existent and the beer has nothing to do with the real Apostel beer.</p>
-                    </div>
-                    <div class="col-lg-4 col-md-6 text-right">
-                      <a href="contact.php" class="filled-button" onclick="alert('I said don\'t!')">Don't Contact Us</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
+    </div>
 
 
         <?php
