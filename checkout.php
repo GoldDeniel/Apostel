@@ -70,17 +70,17 @@ echo "<h1>A kosar tartalma</h1>";
                $sql = "SELECT * FROM Beers WHERE id = {$value["beer_id"]}";
                $res = $conn->query($sql);
                $records = $res->fetchAll(PDO::FETCH_ASSOC);
-               $total += $records[0]['price'];
+               $total += $records[0]['price'] * $value['quantity'];
                ?>
 
                <li class="list-group-item">
                <div class="row">
                      <div class="col-6">
-                          <em><?php echo $records[0]['label']; ?></em>
+                          <em><?php echo $records[0]['label']."(".$value['quantity']."x)"; ?></em>
                      </div>
                      
                      <div class="col-6 text-right">
-                          <strong>$ <?php echo $records[0]['price'];?></strong>
+                          <strong>$ <?php echo $records[0]['price'] * $value['quantity'];?></strong>
                      </div>
                 </div>
              </li>
