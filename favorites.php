@@ -64,7 +64,6 @@
         $conn = get_connection();
         
         $user = $_SESSION['username'];
-        var_dump($user);
         $sql = "SELECT * FROM Beers INNER JOIN Favorites ON Beers.id = Favorites.beer_id WHERE Favorites.user_id = (SELECT id FROM Users WHERE username = '$user') ORDER BY Beers.label";
         $res = $conn -> query($sql);
         $records = $res -> fetchAll(PDO::FETCH_ASSOC);

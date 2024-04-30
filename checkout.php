@@ -58,66 +58,51 @@
         <ul class="list-group list-group-flush">  
 
         <?php
-
+          require_once "credentials.php";
 echo "<h1>A kosar tartalma</h1>";
         if(isset($_SESSION['cart'])) {
 
           $total = 0;
-
+          $conn = get_connection();
           foreach($_SESSION['cart'] as $key => $value) {
-            echo "Az edik elem: " . $key . ", az item mennyisége: " . $value['quantity'] . "<br>";
+            //echo $value["beer_id"];
+
+               $sql = "SELECT * FROM Beers WHERE id = {$value["beer_id"]}";
+               $res = $conn->query($sql);
+               $records = $res->fetchAll(PDO::FETCH_ASSOC);
+               $total += $records[0]['price'];
+               ?>
+
+               <li class="list-group-item">
+               <div class="row">
+                     <div class="col-6">
+                          <em><?php echo $records[0]['label']; ?></em>
+                     </div>
+                     
+                     <div class="col-6 text-right">
+                          <strong>$ <?php echo $records[0]['price'];?></strong>
+                     </div>
+                </div>
+             </li>
+               <?php
           }
      }
         ?>
 
-          <li class="list-group-item">
-            <div class="row">
-                  <div class="col-6">
-                       <em>Termékek ára</em>
-                  </div>
-                  
-                  <div class="col-6 text-right">
-                       <strong>$ 0.00</strong>
-                  </div>
-             </div>
-          </li>
           
 
           <li class="list-group-item">
                <div class="row">
                     <div class="col-6">
-                         <em>Szállítási költség</em>
+                         <h5><em>Végösszeg</em></h5>
                     </div>
 
                     <div class="col-6 text-right">
-                         <strong>$ 0.00</strong>
+                         <h5><strong>$ <?php echo $total?></strong></h5>
                     </div>
                </div>
           </li>
-
-          <li class="list-group-item">
-               <div class="row">
-                    <div class="col-6">
-                         <em>Fizetőmód általi plusz költség</em>
-                    </div>
-
-                    <div class="col-6 text-right">
-                         <strong>$ 0.00</strong>
-                    </div>
-               </div>
-          </li>
-
-          <li class="list-group-item">
-               <div class="row">
-                    <div class="col-6">
-                         <em>Végösszeg</em>
-                    </div>
-
-                    <div class="col-6 text-right">
-                         <strong>$ 0.00</strong>
-                    </div>
-               </div>
-          </li>
+          <a href="empty_cart.php" class="btn btn-danger">Kosár ürítése</a>
 
         </ul>
 
