@@ -55,7 +55,21 @@
 
     <div class="products call-to-action">
       <div class="container">
-        <ul class="list-group list-group-flush">
+        <ul class="list-group list-group-flush">  
+
+        <?php
+
+echo "<h1>A kosar tartalma</h1>";
+        if(isset($_SESSION['cart'])) {
+
+          $total = 0;
+
+          foreach($_SESSION['cart'] as $key => $value) {
+            echo "Az edik elem: " . $key . ", az item mennyisége: " . $value['quantity'] . "<br>";
+          }
+     }
+        ?>
+
           <li class="list-group-item">
             <div class="row">
                   <div class="col-6">

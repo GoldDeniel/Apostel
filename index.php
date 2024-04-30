@@ -90,7 +90,7 @@
         
         foreach ($records as $record_beer) {
 
-          $prize = $record['price'] == 0 ? "<span style=\"color: red\">Jelenleg nincs raktáron</span>" : "$".$record['price'];
+          $prize = $record_beer['price'] == 0 ? "<span style=\"color: red\">Jelenleg nincs raktáron</span>" : "$".$record_beer['price'];
 
           echo
             "

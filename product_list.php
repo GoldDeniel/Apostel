@@ -38,7 +38,7 @@
           "<button class=\"btn btn-danger remove-favorite-button\" product_id=\"{$record_beer['id']}\">Remove from favorites</button>" : 
           "<button class=\"btn btn-warning add-to-favorite-button\" product_id=\"{$record_beer['id']}\">Add to favorites</button>" ;
 
-          $num_selector = $record_beer['price'] == 0 ? "" : "        <input type=\"number\" class=\"mb-3\" min=\"1\" max=\"100\" value=\"1\" class=\"quantity-selector\" product_id=\"{$record_beer['id']}\">
+          $num_selector = $record_beer['price'] == 0 ? "" : "        <input type=\"number\" class=\"mb-3 quantity-selector\" min=\"1\" max=\"100\" value=\"1\"  product_id=\"{$record_beer['id']}\">
           ";
 
           echo 
