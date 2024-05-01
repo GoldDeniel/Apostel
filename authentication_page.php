@@ -1,98 +1,85 @@
 <?php
 
-require_once('credentials.php');
+require_once ('credentials.php');
 
-function redirect($url) {
-    header("Location: $url");
-    exit();
+function login(){
+    if (isset($_POST['email']) && isset($_POST['password'])) {
+            
+            
+        $conn = get_connection();
+        $sql = "SELECT * FROM Users WHERE email = '{$_POST['email']}' AND password_hash = SHA1('{$_POST['password']}')";
+        
+        $res = $conn->query($sql);
+        $records = $res->fetchAll(PDO::FETCH_ASSOC);
+        $conn = null;
+        
+        if (count($records) === 1) {
+            $_SESSION['is_logged_in'] = true;
+            $_SESSION['username'] = $records[0]['username'];
+            $_SESSION['email'] = $records[0]['email'];
+            $_SESSION['user_id'] = $records[0]['id'];
+            
+            header('Location: index.php');
+        }
+        
+    }
+}
+function register(){
+    if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['passwordConfirmation'])) {
+
+        if ($_POST['password'] !== $_POST['passwordConfirmation']) {
+            echo 'Passwords do not match!';
+            return;
+        } 
+
+        if (strlen($_POST['password']) < 8) {
+            echo 'Password must be at least 8 characters long!';
+            return;
+        }
+
+        if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            echo 'Invalid email address!';
+            return;
+        }
+
+        if (strlen($_POST['username']) < 3) {
+            echo 'Username must be at least 3 characters long!';
+            return;
+            
+        } 
+        $conn = get_connection();
+        $sql = "SELECT * FROM Users WHERE email = '{$_POST['email']}' OR username = '{$_POST['username']}'";
+        $res = $conn->query($sql);
+        $records = $res->fetchAll(PDO::FETCH_ASSOC);
+        $conn = null;
+
+        if (count($records) > 0) {
+            echo 'Email address or username already in use!';
+            return;
+        }
+        // ezeket at kell vinni javascript-be, vagy nem, mert mar hasznaltam fetch-t adatbazis feltoltesre
+        $conn = get_connection();
+        $sql = "INSERT INTO Users (username, email, password_hash) VALUES ('{$_POST['username']}', '{$_POST['email']}', SHA1('{$_POST['password']}'))";
+        $conn->exec($sql);
+        $conn = null;
+
+        login();
+    }
 }
 
-function showError($message) {
-    echo $message;
-    exit();
-}
-
-function hashPassword($password) {
-    return sha1($password); // bcrypt would be better
-}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $conn = new PDO(
-        'mysql:host=localhost;dbname=' . DB_NAME . ';charset=utf8',
-        DB_NAME,
-        DB_PASSWORD,
-        [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
-    );
-
+    
+    
     if (isset($_POST['login'])) {
-        if (isset($_POST['email'], $_POST['password'])) {
-            $email = $_POST['email'];
-            $password = hashPassword($_POST['password']);
-            $stmt = $conn->prepare("SELECT * FROM Users WHERE email = ? AND password_hash = ?");
-            $stmt->execute([$email, $password]);
-            $user = $stmt->fetch(PDO::FETCH_ASSOC);
-            if ($user) {
-                session_start();
-                $_SESSION['user'] = $user;
-                setcookie('user', json_encode($user), time() + 3600);
-                redirect('index.php');
-            } else {
-                showError("Sikertelen bejelentkezés!");
-            }
-        }
+        login();
     } elseif (isset($_POST['register'])) {
-        if (isset($_POST['email'], $_POST['password'], $_POST['passwordConfirmation'], $_POST['username'])) {
-            $email = $_POST['email'];
-            $username = $_POST['username'];
-            $password = $_POST['password'];
-            $passwordConfirmation = $_POST['passwordConfirmation'];
-
-            // Credential Check
-            if ($password !== $passwordConfirmation) {
-                showError("Passwords do not match!");
-            }
-
-            if (strlen($password) < 8) {
-                showError("Password must be at least 8 characters long!");
-            }
-
-            if (strlen($username) < 3) {
-                showError("Username must be at least 3 characters long!");
-            }
-            // End of Credential Check
-
-            $hashedPassword = hashPassword($password);
-            $stmt = $conn->prepare("SELECT * FROM Users WHERE email = ?");
-            $stmt->execute([$email]);
-            if ($stmt->fetch(PDO::FETCH_ASSOC)) {
-                showError("Email already registered!");
-            }
-
-            $stmt = $conn->prepare("SELECT * FROM Users WHERE username = ?");
-            $stmt->execute([$username]);
-            if ($stmt->fetch(PDO::FETCH_ASSOC)) {
-                showError("User already exists!");
-            }
-            
-
-            $stmt = $conn->prepare("INSERT INTO Users (email, password_hash, username) VALUES (?, ?, ?)");
-            if ($stmt->execute([$email, $hashedPassword, $username])) {
-                $stmt = $conn->prepare("SELECT * FROM Users WHERE email = ? AND password_hash = ?");
-                $stmt->execute([$email, $hashedPassword]);
-                $user = $stmt->fetch(PDO::FETCH_ASSOC);
-                session_start();
-                $_SESSION['user'] = $user;
-                setcookie('user', json_encode($user), time() + 3600);
-                redirect('index.php');
-            } else {
-                showError("Registration failed!");
-            }
-
-            // TODO: Ezeket a szornyuen kinezo uzeneteket valahogy szebben kellene megjeleniteni, ez frontend resz Jani, good luck :)
-        }
+        register();
     }
-}
+
+} 
+
 ?>
 
 
@@ -140,41 +127,43 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="row">
             <div class="col-12 register-page">
 
-                <form action="" class="w-50 mx-auto" method="POST" id="loginForm">
-                    <h3 class="mt-3">Bejelentkezés</h1>
+                <form action="" class="w-50 mx-auto login-box" method="POST" id="loginForm">
                     <div class="form-group">
-                        <label for="">Email</label>
-                        <input type="email" name="email" id="email">
+                        <h2 class="mt-3 mb-3" >Bejelentkezés</h2>
+                        <label for=""><h3>Email</h3></label>
+                        <input class="form-control-lg form-text" type="email" name="email" id="email">
                     </div>
                     <div class="form-group">
-                        <label for="">Jelszó</label>
-                        <input type="password" name="password" id="password">
+                        <label for=""><h3>Jelszó</h3></label>
+                        <input class="form-control-lg form-text" type="password" name="password" id="password">
+                    </div>
+                    <div>
+                        <span>Még nincs fiókod?</span>
+                        <span id="registerSpan" class="btn">
+                            Regisztrálj!
+                        </span>
                     </div>
                     <button type="submit" class="btn btn-primary" name="login">
                         Bejelentkezés
                     </button>
-                    <span>Még nincs fiókod?</span>
-                    <span id="registerSpan" class="btn">
-                        Regisztrálj!
-                    </span>
                 </form>
 
-                <form action="" class="w-50 mx-auto" method="POST" id="registerForm" hidden>
-                    <h3 class="mt-3">Regisztráció</h1>
+                <form action="" class="w-50 mx-auto login-box" method="POST" id="registerForm" hidden>
+                    <h2 class="mt-3 mb-3">Regisztráció</h2>
                     <div class="form-group">
-                        <label for="">Felhasználónév</label>
+                        <label for=""><h3>Felhasználónév</h3></label><br>
                         <input type="text" name="username" id="username">
                     </div>
                     <div class="form-group">
-                        <label for="">Email</label>
+                        <label for=""><h3>Email</h3></label><br>
                         <input type="email" name="email" id="email">
                     </div>
                     <div class="form-group">
-                        <label for="">Jelszó</label>
+                        <label for=""><h3>Jelszó</h3></label><br>
                         <input type="password" name="password" id="password">
                     </div>
                     <div class="form-group">
-                        <label for="">Jelszó újra:</label>
+                        <label for=""><h3>Jelszó újra:</h3></label><br>
                         <input type="password" name="passwordConfirmation">
                     </div>
                     <button type="submit" class="btn btn-primary" name="register">
@@ -189,11 +178,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         </div>
     </div>
-    
+
 
 
     <script src="assets/js/register.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

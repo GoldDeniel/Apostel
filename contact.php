@@ -70,8 +70,8 @@
           <div class="col-md-4">
             <div class="left-content">
               <h4>Az irodánkról bővebben</h4>
-              <p>Az ApostHell sörrel kapcsolatos kérdéseikkel és visszajelzéseikkel mindig szívesen állunk rendelkezésükre. Vásárlóink bármikor felvehetik velünk a kapcsolatot e-mailben vagy telefonon keresztül, hogy részletes információkat kaphassanak termékeinkről, vagy hogy megosszák velünk tapasztalataikat és véleményüket. Az ügyfélszolgálatunk elkötelezett amellett, hogy minden kérdést és észrevételt figyelembe vegyen, és biztosítsa, hogy minden vásárlónk elégedett legyen.</p>
-              <p class="center">Az ügyfélszolgálat elérhető:
+              <p class="secondary-color">Az ApostHell sörrel kapcsolatos kérdéseikkel és visszajelzéseikkel mindig szívesen állunk rendelkezésükre. Vásárlóink bármikor felvehetik velünk a kapcsolatot e-mailben vagy telefonon keresztül, hogy részletes információkat kaphassanak termékeinkről, vagy hogy megosszák velünk tapasztalataikat és véleményüket. Az ügyfélszolgálatunk elkötelezett amellett, hogy minden kérdést és észrevételt figyelembe vegyen, és biztosítsa, hogy minden vásárlónk elégedett legyen.</p>
+              <p class="center secondary-color">Az ügyfélszolgálat elérhető:
                 <br>Hétfő-Péntek: 8:00 - 16:00
                 <br>Szombat: 8:00 - 12:00
               </p>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 
   <head>
 
@@ -11,7 +11,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>PHPJabbers.com | Free Online Store Website Template</title>
+    <title>Kedvencek</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -61,37 +61,38 @@
         <?php
         
         require_once 'credentials.php';
-        $conn = new PDO(
-          'mysql:host=localhost;dbname='.DB_NAME.';charset=utf8',
-          DB_NAME,
-          DB_PASSWORD
-      );
-        $sql = "SELECT * FROM (Favorites INNER JOIN Users ON Users.id = Favorites.user_id) INNER JOIN Beers ON Beers.id = Favorites.beer_id";
-
+        $conn = get_connection();
+        
+        $user = $_SESSION['username'];
+        $sql = "SELECT * FROM Beers INNER JOIN Favorites ON Beers.id = Favorites.beer_id WHERE Favorites.user_id = (SELECT id FROM Users WHERE username = '$user') ORDER BY Beers.label";
         $res = $conn -> query($sql);
         $records = $res -> fetchAll(PDO::FETCH_ASSOC);
         //var_dump($records);
-        
-        foreach ($records as $record) {
+        foreach ($records as $record_beer) {
 
-          $prize = $record['price'] == 0 ? "<span style=\"color: red\">Out of stock</span>" : "$".$record['price'];
+          $prize = $record_beer['price'] == 0 ? "<span style=\"color: red\">Out of stock</span>" : "$".$record_beer['price'];
+          // remove from favorites
 
+          $button = "<div class=\"text-center\"><button class=\"btn btn-danger remove-favorite-button\" product_id={$record_beer['id']}>Törlés</a></div>";
+          
           echo 
           "
             <div class=\"col-md-4\">
               <div class=\"product-item\">
-                <a href=\"product-details.php\"><img src=\"assets/images/".$record['img_url']."\"></a>
+                <a href=\"product-details.php\"><img src=\"assets/images/".$record_beer['img_url']."\"></a>
                 <div class=\"down-content\">
-                  <a href=\"product-details.php\"><h4>".$record['label']."</h4></a>
+                  <a href=\"product-details.php\"><h4>".$record_beer['label']."</h4></a>
                   <h6>".$prize."</h6>
-                  <p>".$record['description']."</p>
+                  <p>".$record_beer['description']."</p>
+                  <div class=\"text-center\">
+                    $button
+                  </div>
                 </div>
               </div>
             </div>
           ";
         }
-        // $conn -> close();
-        
+        echo "<script src=\"assets/js/product_list.js\"></script>";
         $conn = null;
         ?>
         

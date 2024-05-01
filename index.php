@@ -1,109 +1,106 @@
 <!DOCTYPE html>
 <html lang="hun">
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="assets/images/favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="assets/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+    rel="stylesheet">
 
     <title>ApostHell | Kezdőlap</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <!-- ***** Preloader Start ***** -->
-    <div id="preloader">
-        <div class="jumper">
-            <div></div>
-            <div></div>
-            <div></div>
+  <!-- ***** Preloader Start ***** -->
+  <div id="preloader">
+    <div class="jumper">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- Header -->
+
+  <?php
+  include 'elements/header.php';
+  ?>
+
+  <!-- Page Content -->
+  <!-- Banner Starts Here -->
+  <div class="banner header-text">
+    <div class="owl-banner owl-carousel">
+      <div class="banner-item-01">
+        <div class="text-content">
+          <h4>A kedvenc söröd itt megtalálod!</h4>
+          <h2>ApostHell</h2>
         </div>
-    </div>  
-    <!-- ***** Preloader End ***** -->
-
-    <!-- Header -->
-    
-    <?php 
-      include 'elements/header.php';
-    ?>
-
-    <!-- Page Content -->
-    <!-- Banner Starts Here -->
-    <div class="banner header-text">
-      <div class="owl-banner owl-carousel">
-        <div class="banner-item-01">
-          <div class="text-content">
-            <h4>A kedvenc söröd itt megtalálod!</h4>
-            <h2>ApostHell</h2>
-          </div>
+      </div>
+      <div class="banner-item-02">
+        <div class="text-content">
+          <!-- Itt a lentihez kepest szinten, please -->
+          <h4>Nem volt pénzünk igazi modellekre</h4>
+          <h2>Szép lányok</h2>
         </div>
-        <div class="banner-item-02">
-          <div class="text-content">
-            <!-- Itt a lentihez kepest szinten, please -->
-            <h4>Nem volt pénzünk igazi modellekre</h4>
-            <h2>Szép lányok</h2>
-          </div>
-        </div>
-        <div class="banner-item-03">
-          <div class="text-content">
-            <!-- TODO: Ezeket kerlek majd a stilus alapjan lodd be, a problema, hogy nem latszik a text -->
-            <h4 style="color: black; text-shadow: 2px 2px 4px #ffffff;">Óriási kínálat várja azokat, akik szomjasak</h4>
-            <h2 style="text-shadow: 2px 2px 4px #000000;">Változatosság</h2>    
-          </div>
+      </div>
+      <div class="banner-item-03">
+        <div class="text-content">
+          <!-- TODO: Ezeket kerlek majd a stilus alapjan lodd be, a problema, hogy nem latszik a text -->
+          <h4 style="color: black; text-shadow: 2px 2px 4px #ffffff;">Óriási kínálat várja azokat, akik szomjasak</h4>
+          <h2 style="text-shadow: 2px 2px 4px #000000;">Változatosság</h2>
         </div>
       </div>
     </div>
-    <!-- Banner Ends Here -->
+  </div>
+  <!-- Banner Ends Here -->
 
-    <div class="latest-products">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-heading">
-              <h2>Kiemelt sörkínálatunk</h2>
-              <a href="products.php">továbbiak<i class="fa fa-angle-right"></i></a>
-            </div>
+  <div class="latest-products">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>Kiemelt sörkínálatunk</h2>
+            <a href="products.php">továbbiak<i class="fa fa-angle-right"></i></a>
           </div>
-          <?php
-        
+        </div>
+        <?php
+
         require_once 'credentials.php';
-        $conn = new PDO(
-          'mysql:host=localhost;dbname='.DB_NAME.';charset=utf8',
-          DB_NAME,
-          DB_PASSWORD
-      );
+        $conn = get_connection();
         $sql = "SELECT * FROM Beers ORDER BY id LIMIT 6";
 
-        $res = $conn -> query($sql);
-        $records = $res -> fetchAll(PDO::FETCH_ASSOC);
+        $res = $conn->query($sql);
+        $records = $res->fetchAll(PDO::FETCH_ASSOC);
         //var_dump($records);
         
-        foreach ($records as $record) {
+        foreach ($records as $record_beer) {
 
-          $prize = $record['price'] == 0 ? "<span style=\"color: red\">Jelenleg nincs raktáron</span>" : "$".$record['price'];
+          $prize = $record_beer['price'] == 0 ? "<span style=\"color: red\">Jelenleg nincs raktáron</span>" : "$".$record_beer['price'];
 
-          echo 
-          "
+          echo
+            "
             <div class=\"col-md-4\">
               <div class=\"product-item\">
-                <a href=\"product-details.php\"><img src=\"assets/images/".$record['img_url']."\"></a>
+                <a href=\"product-details.php\"><img src=\"assets/images/" . $record_beer['img_url'] . "\"></a>
                 <div class=\"down-content\">
-                  <a href=\"product-details.php\"><h4>".$record['label']."</h4></a>
-                  <h6>".$prize."</h6>
-                  <p>".$record['description']."</p>
+                  <a href=\"product-details.php\"><h4>" . $record_beer['label'] . "</h4></a>
+                  <h6>" . $prize . "</h6>
+                  <p>" . $record_beer['description'] . "</p>
                 </div>
               </div>
             </div>
@@ -124,20 +121,20 @@
           </div>
           <div class="col-md-6">
             <div class="left-content">
-              <p>Ismerd meg az ApostHell söröket - a minőség és szenvedély tökéletes összhangját! Kézműves szakértelemmel készítettünk kiváló minőségű söröket, hogy minden korty egy különleges utazás legyen az igazi ízek birodalmába. Fedezd fel a sörkultúra új csúcsait velünk!</p>
+              <p class="secondary-color">Ismerd meg az ApostHell söröket - a minőség és szenvedély tökéletes összhangját! Kézműves szakértelemmel készítettünk kiváló minőségű söröket, hogy minden korty egy különleges utazás legyen az igazi ízek birodalmába. Fedezd fel a sörkultúra új csúcsait velünk!</p>
               <a href="about-us.php" class="filled-button">Tudj meg többet</a>
             </div>
           </div>
           <div class="col-md-6">
             <div class="right-image">
-              <img src="assets/images/unnamed_stock_photo3.jpeg" alt="">
+              <img src="assets/images/unnamed_stock_photo3.jpeg" class="round-top" alt="">
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="services" style="background-image: url(assets/images/beer_blog.jpg);" >
+    <div class="services" >
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -185,7 +182,7 @@
       </div>
     </div>
 
-    <!-- Elon musk es tarsai -->
+        <!-- Elon musk es tarsai -->
 
     <div class="happy-clients">
       <div class="container">
@@ -201,7 +198,7 @@
             <div class="owl-clients owl-carousel text-center">
               <div class="service-item">
                 <div class="services-item-image">
-                  <img src="assets/images/elon_musk_beer.jpg" alt=""></i>
+                  <img src="assets/images/elon_musk_beer.jpg" class="round-top" alt=""></i>
                 </div>
                 <div class="down-content">
                   <h4>Elon Musk</h4>
@@ -211,7 +208,7 @@
               
               <div class="service-item">
                 <div class="services-item-image">
-                  <img src="assets/images/mark_zuck_beer.jpg" alt=""></i>
+                  <img src="assets/images/mark_zuck_beer.jpg" class="round-top" alt=""></i>
                 </div>
                 <div class="down-content">
                   <h4>Mark Zuckerberg</h4>
@@ -221,7 +218,7 @@
               
               <div class="service-item">
                 <div class="services-item-image">
-                  <img src="assets/images/damu_roland_beer.png" alt=""></i>
+                  <img src="assets/images/damu_roland_beer.png" class="round-top" alt=""></i>
                 </div>
                 <div class="down-content">
                   <h4>Damu Roland</h4>
@@ -256,19 +253,20 @@
       </div>
     </div>
 
-    
-    <?php 
-      include 'elements/footer.php';
-    ?>
+
+        <?php
+        include 'elements/footer.php';
+        ?>
 
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 
-    <!-- Additional Scripts -->
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/owl.js"></script>
-  </body>
+        <!-- Additional Scripts -->
+        <script src="assets/js/custom.js"></script>
+        <script src="assets/js/owl.js"></script>
+</body>
+
 </html>

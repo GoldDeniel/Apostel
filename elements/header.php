@@ -29,8 +29,9 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <li class="nav-item <?php if($current_page == 'checkout.php') echo 'active'; ?>"><a class="nav-link" href="checkout.php">Kosár</a></li>
 
                 <?php
+                require_once ('credentials.php');
 
-                if (isset($_COOKIE['user'])) {
+                if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true) {
 
                     echo "<li class=\"nav-item\"><a class=\"nav-link <?php if($current_page == 'favorites.php') echo 'active'; ?>\" href=\"favorites.php\">Kedvencek</a></li>";
                     echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"logout.php\">Kijelentkezés</a></li>";
@@ -38,6 +39,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 else {
                     echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"authentication_page.php\">Bejelentkezés/Regisztráció</a></li>";
                 }
+
                 ?>
             </ul>
           </div>
