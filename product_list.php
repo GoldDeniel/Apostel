@@ -45,9 +45,9 @@
           "
             <div class=\"col-md-4\">
               <div class=\"product-item\">
-                <a href=\"product-details.php\"><img src=\"assets/images/".$record_beer['img_url']."\"></a>
+                <img src=\"assets/images/".$record_beer['img_url']."\">
                 <div class=\"down-content\">
-                  <a href=\"product-details.php\"><h4>".$record_beer['label']."</h4></a>
+                  <h4>".$record_beer['label']."</h4>
                   <h6>".$prize."</h6>
                   <p>".$record_beer['description']."</p>
                   $num_selector
