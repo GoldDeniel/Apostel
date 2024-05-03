@@ -206,6 +206,7 @@ header {
     -o-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
 }
+
 header .navbar {
 	padding: 17px 0px;
 }
@@ -235,6 +236,7 @@ header .navbar {
 	float: 	left;
 	margin-top: -12px;
 	outline: none;
+	/* padding-top: 1rem; */
 }
 .navbar .navbar-brand h2 {
 	color: #fff;
@@ -268,6 +270,7 @@ header .navbar {
 	transition: all 0.5s;
 	margin-top: 5px;
 }
+
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .active>.nav-link,
 .navbar .navbar-nav .nav-link.active,
@@ -1010,7 +1013,7 @@ footer .inner-content p a {
 }
 
 .section-background { 
-	background: #f1f1f1; 
+	background: #1E2328; 
 }
 
 .section {

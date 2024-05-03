@@ -30,13 +30,13 @@
 
         foreach ($records_beers as $record_beer) {
 
-          $prize = $record_beer['price'] == 0 ? "<span style=\"color: red\">Jelenleg nincs raktáron</span>" : "$".$record_beer['price'];
+          $prize = $record_beer['price'] == 0 ? "<span style=\"color: red\">Elfogyott</span>" : "$".$record_beer['price'];
           
-          $button_to_cart = $record_beer['price'] == 0 ? "" : "<button class=\"btn btn-primary add-to-cart-button\" product_id=\"{$record_beer['id']}\">Add to cart</button>";
+          $button_to_cart = $record_beer['price'] == 0 ? "" : "<button class=\"btn btn-primary add-to-cart-button\" product_id=\"{$record_beer['id']}\">Kosárba</button>";
           $button_to_favorties = 
           is_product_favorited($record_beer) ?
-          "<button class=\"btn btn-danger remove-favorite-button\" product_id=\"{$record_beer['id']}\">Remove from favorites</button>" : 
-          "<button class=\"btn btn-warning add-to-favorite-button\" product_id=\"{$record_beer['id']}\">Add to favorites</button>" ;
+          "<button class=\"btn btn-danger remove-favorite-button\" product_id=\"{$record_beer['id']}\">Törlés a kedvencekből</button>" : 
+          "<button class=\"btn btn-warning add-to-favorite-button\" product_id=\"{$record_beer['id']}\">Kedvencekhez adás</button>" ;
 
           $num_selector = $record_beer['price'] == 0 ? "" : "        <input type=\"number\" class=\"mb-3 quantity-selector\" min=\"1\" max=\"100\" value=\"1\"  product_id=\"{$record_beer['id']}\">
           ";

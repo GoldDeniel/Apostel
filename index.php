@@ -90,15 +90,15 @@
         
         foreach ($records as $record_beer) {
 
-          $prize = $record_beer['price'] == 0 ? "<span style=\"color: red\">Jelenleg nincs raktáron</span>" : "$".$record_beer['price'];
+          $prize = $record_beer['price'] == 0 ? "<span style=\"color: red\">Elfogyott</span>" : "$".$record_beer['price'];
 
           echo
             "
             <div class=\"col-md-4\">
               <div class=\"product-item\">
-                <a href=\"product-details.php\"><img src=\"assets/images/" . $record_beer['img_url'] . "\"></a>
+                <img src=\"assets/images/" . $record_beer['img_url'] . "\">
                 <div class=\"down-content\">
-                  <a href=\"product-details.php\"><h4>" . $record_beer['label'] . "</h4></a>
+                  <h4>" . $record_beer['label'] . "</h4>
                   <h6>" . $prize . "</h6>
                   <p>" . $record_beer['description'] . "</p>
                 </div>
@@ -119,7 +119,7 @@
               <h2>Rólunk</h2>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-12">
             <div class="left-content">
               <p class="secondary-color">Ismerd meg az ApostHell söröket - a minőség és szenvedély tökéletes összhangját! Kézműves szakértelemmel készítettünk kiváló minőségű söröket, hogy minden korty egy különleges utazás legyen az igazi ízek birodalmába. Fedezd fel a sörkultúra új csúcsait velünk!</p>
               <a href="about-us.php" class="filled-button">Tudj meg többet</a>
@@ -147,10 +147,10 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="service-item">
-              <a href="#" class="services-item-image"><img src="assets/images/product-2.jpeg" class="img-fluid" alt=""></a>
+              <a href="blog.php" class="services-item-image"><img src="assets/images/product-2.jpeg" class="img-fluid" alt=""></a>
 
               <div class="down-content">
-                <h4><a href="#">Elkészítettük a kéréseitek alapján várva-várt legújabb sörünket, a HolyHell-t</a></h4>
+                <h4><a href="blog.php">Elkészítettük a kéréseitek alapján várva-várt legújabb sörünket, a HolyHell-t</a></h4>
 
                 <p style="margin: 0;"> Dániel Arany &nbsp;&nbsp;|&nbsp;&nbsp; 10/05/2024 08:11 </p>
               </div>
@@ -158,10 +158,10 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="service-item">
-              <a href="#" class="services-item-image"><img src="assets/images/beer-2.jpg" class="img-fluid" alt=""></a>
+              <a href="blog.php" class="services-item-image"><img src="assets/images/beer-2.jpg" class="img-fluid" alt=""></a>
 
               <div class="down-content">
-                <h4><a href="#">Kikértük a véleményeteket: ezeket a dolgokat kértétek, hogy jellemezzék a legújabb sörünket</a></h4>
+                <h4><a href="blog.php">Kikértük a véleményeteket: ezeket a dolgokat kértétek, hogy jellemezzék a legújabb sörünket</a></h4>
 
                 <p style="margin: 0;"> János Orsós &nbsp;&nbsp;|&nbsp;&nbsp; 20/04/2024 11:25 </p>
               </div>
@@ -169,10 +169,10 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="service-item">
-              <a href="#" class="services-item-image"><img src="assets/images/beer-delivery-logo.jpg" class="img-fluid" alt=""></a>
+              <a href="blog.php" class="services-item-image"><img src="assets/images/beer-delivery-logo.jpg" class="img-fluid" alt=""></a>
 
               <div class="down-content">
-                <h4><a href="#">Bővültek szállítási lehetőségeink, most már két újabb országban is élvezhetik söreinket</a></h4>
+                <h4><a href="blog.php">Bővültek szállítási lehetőségeink, most már két újabb országban is élvezhetik söreinket</a></h4>
 
                 <p style="margin: 0;"> János Orsós &nbsp;&nbsp;|&nbsp;&nbsp; 12/04/2024 16:46</p>
               </div>
@@ -244,7 +244,7 @@
                   <p>Ez az oldal nem létezik, és a sörünknek semmi köze az igazi Apostel sörhöz.</p>
                 </div>
                 <div class="col-lg-4 col-md-6 text-right">
-                  <a href="contact.php" class="filled-button" onclick="alert('I said don\'t!')">Ne lépj velünk kapcsolatba</a>
+                  <a href="contact.php" class="filled-button" onclick="alert('Azt mondtam, ne!')">Ne lépj velünk kapcsolatba</a>
                 </div>
               </div>
             </div>

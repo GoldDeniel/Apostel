@@ -63,67 +63,67 @@
 
             <h5>1. Bevezető</h5>
 
-            <p>Ezen Általános Szerződési Feltételek (a továbbiakban: "ÁSZF") az ApostHell Hungary Kft., székhelye: 6000 Kecskemét, Izsáki út 10. adószám: 12345678-9-01, nyilvántartási szám: ABC123456DEF (a továbbiakban: "Szolgáltató") és az általa nyújtott szolgáltatásokat igénybe vevő ügyfél (a továbbiakban: "Felhasználó") közötti jogviszonyra vonatkoznak.</p>
+            <p style="color: white;">Ezen Általános Szerződési Feltételek (a továbbiakban: "ÁSZF") az ApostHell Hungary Kft., székhelye: 6000 Kecskemét, Izsáki út 10. adószám: 12345678-9-01, nyilvántartási szám: ABC123456DEF (a továbbiakban: "Szolgáltató") és az általa nyújtott szolgáltatásokat igénybe vevő ügyfél (a továbbiakban: "Felhasználó") közötti jogviszonyra vonatkoznak.</p>
 
             <br>
             <br>
 
             <h5>2. A Szolgáltatások</h5>
 
-            <p>A Szolgáltató által nyújtott szolgáltatások részletes leírása és feltételei megtalálhatók a Szolgáltató honlapján vagy egyedi megállapodás alapján.</p>
+            <p style="color: white;">A Szolgáltató által nyújtott szolgáltatások részletes leírása és feltételei megtalálhatók a Szolgáltató honlapján vagy egyedi megállapodás alapján.</p>
             
             <br>
             <br>
 
             <h5>3. Fizetési Feltételek</h5>
 
-            <p>A Szolgáltatásokért fizetendő díjak és fizetési feltételek részletezése a Szolgáltató honlapján vagy egyedi megállapodás alapján található.</p>
+            <p style="color: white;">A Szolgáltatásokért fizetendő díjak és fizetési feltételek részletezése a Szolgáltató honlapján vagy egyedi megállapodás alapján található.</p>
         
             <br>
             <br>
 
             <h5>4. Felhasználói Felelősség és Jogok</h5>
 
-            <p>A Felhasználó felelős minden olyan tevékenységért és tartalomért, amelyet a Szolgáltató szolgáltatásai igénybevétele során létrehoz vagy terjeszt.</p>
+            <p style="color: white;">A Felhasználó felelős minden olyan tevékenységért és tartalomért, amelyet a Szolgáltató szolgáltatásai igénybevétele során létrehoz vagy terjeszt.</p>
 
             <br>
             <br>
 
             <h5>5. Adatvédelem és Biztonság</h5>
 
-            <p>A Szolgáltató kötelezettséget vállal arra, hogy a Felhasználó által rendelkezésre bocsátott személyes adatokat bizalmasan kezeli, és azokat kizárólag a szolgáltatás nyújtása céljából használja fel.</p>
+            <p style="color: white;">A Szolgáltató kötelezettséget vállal arra, hogy a Felhasználó által rendelkezésre bocsátott személyes adatokat bizalmasan kezeli, és azokat kizárólag a szolgáltatás nyújtása céljából használja fel.</p>
             
             <br>
             <br>
 
             <h5>6. Felelősségkorlátozás</h5>
 
-            <p>A Szolgáltató nem vállal felelősséget semmilyen közvetlen vagy közvetett kárért, amely a Szolgáltatások használatából vagy azokhoz való hozzáférésből ered.</p>
+            <p style="color: white;">A Szolgáltató nem vállal felelősséget semmilyen közvetlen vagy közvetett kárért, amely a Szolgáltatások használatából vagy azokhoz való hozzáférésből ered.</p>
             
             <br>
             <br>
 
             <h5>7. Jogviták</h5>
 
-            <p>Ezen ÁSZF-ból eredő valamennyi jogvitát a felek elsődlegesen békés úton, tárgyalással igyekeznek rendezni. Amennyiben a jogvitát nem sikerül békésen megoldani, azt a Szolgáltató székhelye szerinti illetékes bíróság előtt kell rendezni.</p>
+            <p style="color: white;">Ezen ÁSZF-ból eredő valamennyi jogvitát a felek elsődlegesen békés úton, tárgyalással igyekeznek rendezni. Amennyiben a jogvitát nem sikerül békésen megoldani, azt a Szolgáltató székhelye szerinti illetékes bíróság előtt kell rendezni.</p>
             
             <br>
             <br>
 
             <h5>8. Módosítások</h5>
 
-            <p>A Szolgáltató fenntartja a jogot arra, hogy bármikor módosítsa ezen ÁSZF feltételeit. Az ilyen módosításokat a Szolgáltató az ÁSZF honlapján vagy más megfelelő módon közzéteszi, és azok azonnal hatályba lépnek.</p>
+            <p style="color: white;">A Szolgáltató fenntartja a jogot arra, hogy bármikor módosítsa ezen ÁSZF feltételeit. Az ilyen módosításokat a Szolgáltató az ÁSZF honlapján vagy más megfelelő módon közzéteszi, és azok azonnal hatályba lépnek.</p>
             
             <br>
             <br>
 
             <h5>9. Egyéb Rendelkezések</h5>
 
-            <p>Amennyiben bármely rendelkezés ezen ÁSZF-ben érvénytelenné válik vagy jogerőtelennek minősül, a többi rendelkezés érvényessége és hatálya nem érintett.</p>
+            <p style="color: white;">Amennyiben bármely rendelkezés ezen ÁSZF-ben érvénytelenné válik vagy jogerőtelennek minősül, a többi rendelkezés érvényessége és hatálya nem érintett.</p>
 
             <br>
             
-            <p>Ezen ÁSZF elfogadásával a Felhasználó beleegyezik abba, hogy a Szolgáltatóval fennálló jogviszonyára kizárólag ezen ÁSZF-ben foglaltak az irányadóak.</p>
+            <p style="color: white;">Ezen ÁSZF elfogadásával a Felhasználó beleegyezik abba, hogy a Szolgáltatóval fennálló jogviszonyára kizárólag ezen ÁSZF-ben foglaltak az irányadóak.</p>
 
           </div>
         </div>

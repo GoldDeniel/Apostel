@@ -58,9 +58,8 @@
         <div class="row">
           <div class="col-md-4">
             <div class="service-item">
-              <div class="icon">
-                <i class="fa fa-user"></i> 
-                <!--<img src="assets/images/elon_musk_beer.jpg" alt=""></i>-->
+              <div class="services-item-image">
+                <img src="assets/images/elon_musk_beer.jpg" alt="" width="350px" height="350px">
               </div>
               <div class="down-content">
                   <h4>Elon Musk</h4>
@@ -69,10 +68,10 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="service-item">
-              <div class="icon">
-                <i class="fa fa-user"></i>
-              </div>
+          <div class="service-item">
+            <div class="services-item-image">
+              <img src="assets/images/mark_zuck_beer.jpg" alt="" width="350px" height="350px">
+            </div>
               <div class="down-content">
                   <h4>Mark Zuckerberg</h4>
                   <p class="n-m"><em>"Már a Harvardos óta ezt a sört iszom, sokat segített a Facebook kitalálásához."</em></p>
@@ -80,10 +79,10 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="service-item">
-              <div class="icon">
-                <i class="fa fa-user"></i>
-              </div>
+          <div class="service-item">
+            <div class="services-item-image">
+              <img src="assets/images/damu_roland_beer.png" alt="" width="350px" height="350px">
+            </div>
               <div class="down-content">
                   <h4>Damu Roland</h4>
                   <p class="n-m"><em>"Általában amikor már reggel felkelek, hogy pucoljam a marhát, amikor nehogy már olyan nyerjen, aki nem tud főzni, aközben mindig az ApostHellt választom!"</em></p>
@@ -94,10 +93,10 @@
 
         <div class="row">
           <div class="col-md-4">
-            <div class="service-item">
-              <div class="icon">
-                <i class="fa fa-user"></i>
-              </div>
+          <div class="service-item">
+            <div class="services-item-image">
+              <img src="assets/images/szobo_beer.jpg" alt="" width="350px" height="350px">
+            </div>
               <div class="down-content">
                   <h4>Szoboszlai Dominik</h4>
                   <p class="n-m"><em>"Minden válogatott és Liverpool-os meccsem előtt betolok 1-2 ApostHellt, egyből megjavul a látásom, be is küldöm a bal cifakba."</em></p>
@@ -105,9 +104,9 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="service-item">
-              <div class="icon">
-                <i class="fa fa-user"></i>
+          <div class="service-item">
+            <div class="services-item-image">
+              <img src="assets/images/orban_beer.jpg" alt="" width="350px" height="350px">
               </div>
               <div class="down-content">
                   <h4>Orbán Viktor</h4>
@@ -116,9 +115,9 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="service-item">
-              <div class="icon">
-                <i class="fa fa-user"></i>
+          <div class="service-item">
+            <div class="services-item-image">
+              <img src="assets/images/team_01.jpg" alt="" width="350px" height="350px">
               </div>
               <div class="down-content">
                   <h4>Jimmy</h4>

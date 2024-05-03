@@ -70,7 +70,7 @@
           <div class="col-md-6">
             <div class="left-content">
               <h4 color:gold>Ha a valós minőséget akarod képviselni</h4>
-              <p class="secondary-color">Az ApostHell sört választani egyértelmű döntés a minőség és az élvezet jegyében. Ez a magyar kézműves sör kiváló minőségű összetevőkből készül, és a receptúra gondos odafigyeléssel alkotott. Az ApostHell nem csupán egy ital, hanem egy élmény, amely megédesíti az élet pillanatait. Finom ízvilága minden kort és ízlést megnyer, és egyedi jellegével a különlegességet képviseli a sörpiac palettáján. A választás az ApostHell mellett tehát nem csupán egy sör melletti döntés, hanem egy minőségi életstílusra való voksolás is.</p>
+              <p class="secondary-color" style="color: white;">Az ApostHell sört választani egyértelmű döntés a minőség és az élvezet jegyében. Ez a magyar kézműves sör kiváló minőségű összetevőkből készül, és a receptúra gondos odafigyeléssel alkotott. Az ApostHell nem csupán egy ital, hanem egy élmény, amely megédesíti az élet pillanatait. Finom ízvilága minden kort és ízlést megnyer, és egyedi jellegével a különlegességet képviseli a sörpiac palettáján. A választás az ApostHell mellett tehát nem csupán egy sör melletti döntés, hanem egy minőségi életstílusra való voksolás is.</p>
               <ul class="social-icons">
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -92,10 +92,10 @@
               <h2>Hogyan készítjük söreinket?</h2>
             </div>
             <ol>
-              <li>Az ApostHell sör megalkotása minden lépésében a tökéletesség iránti elkötelezettséget tükrözi. A folyamat már az alapanyagok kiválasztásával kezdődik, ahol a legjobb minőségű malátát és komlót választják ki, hogy az ízek és aromák tökéletes harmóniáját érjék el.</li>
-              <li>A recept elkészítésekor a sörfőzőmester szakértelme és szenvedélye mindent áthat, miközben gondosan méri és keveri össze az összetevőket. A pontos arányok és a hőmérséklet precíz szabályozása elengedhetetlen a kívánt ízprofil eléréséhez.</li>
-              <li>A erjesztés folyamata során a sörmester szinte mint egy művész figyeli a sör fejlődését, gondoskodva arról, hogy minden egyes lépésnél a legmagasabb minőséget érjék el. A hosszú érlelési idő és a megfelelő környezeti feltételek biztosítják, hogy az ízek kiegyensúlyozottak legyenek, és az ApostHell egyedülálló karakterét megőrizzék.</li>
-              <li>Végül a sör palackozása és címkézése is ugyanolyan gondosan történik, hogy a vásárlók a legjobb minőséget kapják a kézhezvételekor. Az ApostHell sör elkészítése minden egyes lépésében a hagyomány és a modern sörfőzés legjobb gyakorlatait ötvözi, így garantálva az élvezet teljes spektrumát minden kort és ízlést illetően.</li>
+              <li style="color: white;">Az ApostHell sör megalkotása minden lépésében a tökéletesség iránti elkötelezettséget tükrözi. A folyamat már az alapanyagok kiválasztásával kezdődik, ahol a legjobb minőségű malátát és komlót választják ki, hogy az ízek és aromák tökéletes harmóniáját érjék el.</li>
+              <li style="color: white;">A recept elkészítésekor a sörfőzőmester szakértelme és szenvedélye mindent áthat, miközben gondosan méri és keveri össze az összetevőket. A pontos arányok és a hőmérséklet precíz szabályozása elengedhetetlen a kívánt ízprofil eléréséhez.</li>
+              <li style="color: white;">A erjesztés folyamata során a sörmester szinte mint egy művész figyeli a sör fejlődését, gondoskodva arról, hogy minden egyes lépésnél a legmagasabb minőséget érjék el. A hosszú érlelési idő és a megfelelő környezeti feltételek biztosítják, hogy az ízek kiegyensúlyozottak legyenek, és az ApostHell egyedülálló karakterét megőrizzék.</li>
+              <li style="color: white;">Végül a sör palackozása és címkézése is ugyanolyan gondosan történik, hogy a vásárlók a legjobb minőséget kapják a kézhezvételekor. Az ApostHell sör elkészítése minden egyes lépésében a hagyomány és a modern sörfőzés legjobb gyakorlatait ötvözi, így garantálva az élvezet teljes spektrumát minden kort és ízlést illetően.</li>
             </ol>
             </div>
         </div>

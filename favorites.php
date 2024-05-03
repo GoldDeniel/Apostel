@@ -11,7 +11,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>Kedvencek</title>
+    <title>ApostHell | Kedvencek</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -40,13 +40,13 @@
       include 'elements/header.php';
     ?>
     <!-- Page Content -->
-    <div class="page-heading about-heading header-text" style="background-image: url(assets/images/heading-6-1920x500.jpg);">
+    <div class="page-heading about-heading header-text" style="background-image: url(assets/images/fav-back.jpg);">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="text-content">
-              <h4>Lorem ipsum dolor sit amet</h4>
-              <h2>Products</h2>
+              <h4>Kedvencek</h4>
+              <h2>Legjobb választásaid</h2>
             </div>
           </div>
         </div>
@@ -70,7 +70,7 @@
         //var_dump($records);
         foreach ($records as $record_beer) {
 
-          $prize = $record_beer['price'] == 0 ? "<span style=\"color: red\">Out of stock</span>" : "$".$record_beer['price'];
+          $prize = $record_beer['price'] == 0 ? "<span style=\"color: red\">Elfogyott</span>" : "$".$record_beer['price'];
           // remove from favorites
 
           $button = "<div class=\"text-center\"><button class=\"btn btn-danger remove-favorite-button\" product_id={$record_beer['id']}>Törlés</a></div>";
