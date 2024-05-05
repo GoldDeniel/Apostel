@@ -18,22 +18,47 @@ cart_buttons.forEach(button => {
         const quantity_selector = button.parentElement.querySelector('.quantity-selector');
         const quantity = quantity_selector.value;
         console.log(quantity);
-        fetch('add_to_cart.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({beer_id: productId, quantity: quantity})
-        }).then(response => {
-            return response.json();
-        }).then(data => {
-            console.log(data);
-        }).catch(error => {
-            console.log(error);
-        });
+        if (button.classList.contains('btn-success')) {
+            // Ha a gomb zöld, akkor visszavonjuk a kosárba helyezést
+            fetch('remove_from_cart.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({beer_id: productId})
+            }).then(response => {
+                return response.json();
+            }).then(data => {
+                console.log(data);
+                // Kosárba gomb visszaállítása eredeti állapotba
+                button.innerHTML = "Kosárba";
+                button.classList.remove("btn-success");
+                button.classList.add("btn-primary");
+            }).catch(error => {
+                console.log(error);
+            });
+        } else {
+            // Ha a gomb nem zöld, akkor a kosárba helyezzük
+            fetch('add_to_cart.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({beer_id: productId, quantity: quantity})
+            }).then(response => {
+                return response.json();
+            }).then(data => {
+                console.log(data);
+                // Kosárba gomb módosítása
+                button.innerHTML = "Kosárban";
+                button.classList.remove("btn-primary");
+                button.classList.add("btn-success");
+            }).catch(error => {
+                console.log(error);
+            });
+        }
     });
 });
-
 
 
 function change_to_remove_favorite_button(button) {
