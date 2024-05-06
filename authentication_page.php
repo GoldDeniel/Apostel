@@ -123,19 +123,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       </div>
     </div>
 
-    <div class="container">
+    <div class="container mb-3">
         <div class="row">
             <div class="col-12 register-page">
 
-                <form action="" class="w-50 mx-auto login-box" method="POST" id="loginForm">
+                <form action="" class=" mx-auto login-box" method="POST" id="loginForm">
                     <div class="form-group">
                         <h2 class="mt-3 mb-3" >Bejelentkezés</h2>
                         <label for=""><h3>Email</h3></label>
-                        <input class="form-control-lg form-text" type="email" name="email" id="email">
+                        <input class="form-control-lg form-text w-auto p-3" type="email" name="email" id="email">
                     </div>
                     <div class="form-group">
                         <label for=""><h3>Jelszó</h3></label>
-                        <input class="form-control-lg form-text" type="password" name="password" id="password">
+                        <input class="form-control-lg form-text w-auto p-3" type="password" name="password" id="password">
                     </div>
                     <div>
                         <span>Még nincs fiókod?</span>
@@ -148,23 +148,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </button>
                 </form>
 
-                <form action="" class="w-50 mx-auto login-box" method="POST" id="registerForm" hidden>
+                <form action="" class="mx-auto login-box" method="POST" id="registerForm" hidden>
                     <h2 class="mt-3 mb-3">Regisztráció</h2>
                     <div class="form-group">
                         <label for=""><h3>Felhasználónév</h3></label><br>
-                        <input type="text" name="username" id="username">
+                        <input type="text" name="username" id="username" class="w-auto">
                     </div>
                     <div class="form-group">
                         <label for=""><h3>Email</h3></label><br>
-                        <input type="email" name="email" id="email">
+                        <input type="email" name="email" id="email" class="w-auto">
                     </div>
                     <div class="form-group">
                         <label for=""><h3>Jelszó</h3></label><br>
-                        <input type="password" name="password" id="password">
+                        <input type="password" name="password" id="password" class="w-auto">
                     </div>
                     <div class="form-group">
                         <label for=""><h3>Jelszó újra:</h3></label><br>
-                        <input type="password" name="passwordConfirmation">
+                        <input type="password" name="passwordConfirmation" class="w-auto">
                     </div>
                     <button type="submit" class="btn btn-primary" name="register">
                         Regisztráció

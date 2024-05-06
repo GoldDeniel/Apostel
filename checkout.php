@@ -59,7 +59,7 @@
 
         <?php
           require_once "credentials.php";
-echo "<h1>A kosar tartalma</h1>";
+     echo "<h1>A kosar tartalma</h1>";
         if(isset($_SESSION['cart'])) {
 
           $total = 0;

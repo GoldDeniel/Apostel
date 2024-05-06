@@ -1,25 +1,26 @@
 <?php
-    error_reporting(E_ALL);
     require_once 'credentials.php';
-    
+    echo "Sending...";
     // if cart is empty, redirect to checkout
     if (count($_SESSION['cart']) == 0) {
         header('Location: checkout.php');
         die();
     }
-
+    echo "Connecting...";
     $conn = get_connection();
-
+    echo "Connected!";
     if(!isset($_SESSION['user_id'])) {
         $user_id = 2;
     } else {
         $user_id = $_SESSION['user_id'];
     }
- 
+    echo "User ID: $user_id";
+    echo "Inserting order...";
     $sql = "INSERT INTO Orders (id, user_id) VALUES (NULL, '$user_id'); ";
     $res = $conn -> query($sql);
     $order_id = $conn -> lastInsertId();
-
+    echo "Order ID: $order_id";
+    
     if ($res !== false)
     foreach ($_SESSION['cart'] as $items => $item) {
         $sql = "INSERT INTO OrderItems (order_id, beer_id, quantity) VALUES ('$order_id', '{$item['beer_id']}', '{$item['quantity']}')";

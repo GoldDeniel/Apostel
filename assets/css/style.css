@@ -429,6 +429,7 @@ header .navbar {
 .product-item img {
 	width: 100%;
 	overflow: hidden;
+	border-radius: 10px 10px 0 0;
 }
 
 .product-item .down-content h4 {
@@ -1040,7 +1041,9 @@ footer .inner-content p a {
 	margin-top: 100px;
 	color:#f0cc00
 }
-
+.register-page form {
+	width: fit-content;
+}
 /* Responsive Style */
 @media (max-width: 768px) {
 	.banner .text-content {
