@@ -33,9 +33,25 @@
           $prize = $record_beer['price'] == 0 ? "<span style=\"color: red\">Elfogyott</span>" : "$".$record_beer['price'];
           
           $button_to_cart = $record_beer['price'] == 0 ? "" : "<button class=\"btn btn-primary add-to-cart-button\" product_id=\"{$record_beer['id']}\">Kosárba</button>";
+
+          if ($record_beer['price'] == 0)
+          {
+            $button_to_cart = "";
+          }
+          else if (isset($_SESSION['cart'])){
+            foreach ($_SESSION['cart'] as $key => $item) {
+              if ($item['beer_id'] == $record_beer['id']) {
+                $button_to_cart = "<button class=\"btn btn-success add-to-cart-button mb-1\" product_id=\"{$record_beer['id']}\">Kosárban</button>";
+                  break;
+              }
+          }
+          } else {
+            $button_to_cart = "<button class=\"btn btn-primary add-to-cart-button\" product_id=\"{$record_beer['id']}\">Kosárba</button>";
+          }
+
           $button_to_favorties = 
           is_product_favorited($record_beer) ?
-          "<button class=\"btn btn-danger remove-favorite-button\" product_id=\"{$record_beer['id']}\">Törlés a kedvencekből</button>" : 
+          "<button class=\"btn btn-danger remove-favorite-button mt-1\" product_id=\"{$record_beer['id']}\">Törlés a kedvencekből</button>" : 
           "<button class=\"btn btn-warning add-to-favorite-button\" product_id=\"{$record_beer['id']}\">Kedvencekhez adás</button>" ;
 
           $num_selector = $record_beer['price'] == 0 ? "" : "        <input type=\"number\" class=\"mb-3 quantity-selector\" min=\"1\" max=\"100\" value=\"1\"  product_id=\"{$record_beer['id']}\">
