@@ -15,7 +15,8 @@ $beerid = $data['beer_id'];
 
 if ($beerid !== null) {
     
-    $userid = 1; // Retrieve the user from the session
+    //$userid = 1; // Retrieve the user from the session
+    $userid = $_SESSION['user_id'];
     //$sql = "INSERT INTO Favorites (user_id, beer_id) VALUES ({$_SESSION['user_id']}, $beerid)";
     $sql = "INSERT INTO Favorites (user_id, beer_id) VALUES ($userid, $beerid)";
     $result = $conn->query($sql);
